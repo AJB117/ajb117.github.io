@@ -1,11 +1,8 @@
 import React from "react"
-import { Link } from 'gatsby';
+import Home from './home/Home';
 
-export default function Home() {
+export default function App() {
   return (
-    <>
-      <div>Hello world!</div>
-      <Link to={'/blog/first-post'}>First page</Link>
-    </>
+    <Home/>
   )
 }
