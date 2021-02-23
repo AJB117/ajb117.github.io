@@ -5,7 +5,9 @@ import '../../styles/TopBar.css';
 
 const TopBar = () => {
   return (
-    <AppBar>
+    <AppBar
+      style={{background: '#d32f2f'}}
+    >
       <div className="text">
         <h2>
           <Link to="/">
