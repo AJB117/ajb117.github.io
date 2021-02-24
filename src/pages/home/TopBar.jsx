@@ -6,14 +6,13 @@ import '../../styles/TopBar.css';
 const TopBar = () => {
   const AppBarStyle = {
     background: '#d32f2f',
-    maxHeight: '80px'
   };
   return (
     <AppBar
       style={AppBarStyle}
     >
       <Toolbar
-        variant="compact"
+        variant="dense"
       >
         <div className="text">
           <h2>
