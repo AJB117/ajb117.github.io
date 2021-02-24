@@ -1,19 +1,11 @@
-.TopBar {
-  overflow: hidden;
-  background-color: beige;
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
-
 .text {
+  width: max-content;
   display: flex;
-  align-items: center;
-  width: 100%;
+  float: left;
 }
 
 a {
-  color: white;
+  color: #676767;
   text-decoration: none;
 }
 

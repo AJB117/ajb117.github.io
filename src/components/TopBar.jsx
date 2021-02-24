@@ -1,11 +1,12 @@
 import { AppBar, Toolbar } from '@material-ui/core';
 import { Link } from 'gatsby';
 import React from 'react';
-import '../../styles/TopBar.css';
+import '../styles/TopBar.css'
 
 const TopBar = () => {
   const AppBarStyle = {
-    background: '#d32f2f',
+    // background: '#d32f2f',
+    background: '#F5F5F5'
   };
   return (
     <AppBar
@@ -17,12 +18,17 @@ const TopBar = () => {
         <div className="text">
           <h2>
             <Link to="/">
-              My Blog
+              Home
             </Link>
           </h2>
           <h2>
             <Link to="/blog/first-post">
-              Posts
+              Blog
+            </Link>
+          </h2>
+          <h2>
+            <Link to="/contact">
+              Contact
             </Link>
           </h2>
         </div>

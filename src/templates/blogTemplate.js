@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import TopBar from "../pages/home/TopBar"
+import TopBar from "../components/TopBar"
 import './blogPostTemplate.css'
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
