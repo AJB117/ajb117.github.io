@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{CgMH:function(t,n,e){"use strict";e.r(n);var a=e("q1tI"),c=e.n(a),i=e("rG6k");e("Y3li");n.default=function(){return c.a.createElement("div",{className:"contact-text"},c.a.createElement(i.a,null),"Contact")}},Y3li:function(t,n,e){}}]);
+//# sourceMappingURL=component---src-pages-contact-contact-js-1bf87c6efc7c2129b329.js.map
