@@ -7,11 +7,11 @@
 .blog-post-header {
   margin: 0 auto;
   font-size: 22px;
-  max-width: calc(800px - (30px * 2));
+  max-width: 1000px;
 }
 
 .blog-post-content {
-  max-width: calc(800px - (30px * 2));
+  max-width: 1000px; 
   margin: 0 auto;
   font-size: 17px;
   line-height: 1.6;
