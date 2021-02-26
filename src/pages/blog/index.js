@@ -4,7 +4,6 @@ import TopBar from '../../components/TopBar';
 import '../../styles/blog.css';
 
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { CardActionArea } from '@material-ui/core';
@@ -23,7 +22,7 @@ const Blog = ({
       <div className="blog-front">
         {
           nodes.map((node, idx) => (
-            <Card key={idx} className="blog-card">
+            <Card key={idx} className="blog-card" elevation={0}>
               <CardActionArea onClick={() => {navigate(node.frontmatter.slug)}}>
                 <CardContent>
                   <Typography color="textSecondary" gutterBottom>

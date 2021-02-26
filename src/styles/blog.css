@@ -1,9 +1,18 @@
 .blog-front {
   margin-top: 100px;
+  display: grid;
 }
 
 .blog-card {
   margin: 0 auto;
-  max-width: 30%;
+  max-width: 750px; 
   margin-top: 30px;
 }
+
+@media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px) {
+    .blog-card {
+      max-width: 55%;
+    }
+  }
