@@ -22,7 +22,7 @@ const TopBar = () => {
             </Link>
           </h2>
           <h2>
-            <Link to="/blog/first-post">
+            <Link to="/blog">
               Blog
             </Link>
           </h2>
