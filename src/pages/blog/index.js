@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql, navigate } from 'gatsby';
-import TopBar from '../../components/TopBar';
 import '../../styles/blog.css';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { CardActionArea } from '@material-ui/core';
+import Layout from '../../components/Layout';
 
 const Blog = ({ 
     data: {
@@ -17,8 +17,7 @@ const Blog = ({
   }) => {
   nodes.forEach(node => console.log(node));
   return (
-    <div>
-      <TopBar/>
+    <Layout>
       <div className="blog-front">
         {
           nodes.map((node, idx) => (
@@ -40,7 +39,7 @@ const Blog = ({
           ))
         }
       </div>
-    </div>
+    </Layout>
   )
 }
 

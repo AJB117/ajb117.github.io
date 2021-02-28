@@ -1,13 +1,14 @@
 import React from 'react';
-import TopBar from '../../components/TopBar';
+import Layout from '../../components/Layout';
 import '../../styles/contact.css';
 
 const Contact = () => {
   return (
-    <div className="contact-text">
-      <TopBar/>
-      Contact
-    </div>
+    <Layout>
+      <div className="contact-text">
+        Contact
+      </div>
+    </Layout>
   )
 }
 
