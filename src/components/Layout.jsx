@@ -1,10 +1,10 @@
 import React from 'react';
 import TopBar from './TopBar';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, inBlogPost }) => {
   return (
     <div>
-      <TopBar/>
+      <TopBar inBlogPost={inBlogPost}/>
       {children}
     </div>
   )

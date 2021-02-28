@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import TopBar from "../components/TopBar"
 import './blogPostTemplate.css'
+import Layout from "../components/Layout"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <>
-      <TopBar/>
+    <Layout inBlogPost={true}>
       <div className="blog-post-container">
         <div className="blog-post">
           <div className="blog-post-header">
@@ -22,7 +22,7 @@ export default function Template({
           />
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
 export const pageQuery = graphql`
