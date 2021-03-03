@@ -11,6 +11,7 @@ const Home = () => {
         className="photo"
         src="../../../static/photo.jpg"
         alt="me"
+        title="me"
         height={300}
         layout="fixed"
         placeholder="blurred"
@@ -25,16 +26,16 @@ const Home = () => {
       </div>
 
       <div className="links">
-        <a href="">CV, </a>
+        <a href="">CV &#8226; </a>
         <Link to="/blog">
-          Blog, 
+          Blog &#8226;
         </Link>
-        <a href="https://www.linkedin.com/in/patrick-soga-5b4118166/"> LinkedIn, </a>
-        <a href="https://github.com/AJB117">Github. </a>
+        <a href="https://www.linkedin.com/in/patrick-soga-5b4118166/"> LinkedIn &#8226; </a>
+        <a href="https://github.com/AJB117">Github</a>
       </div>
 
       <div className="interests">
-        I'm a third-year student at the <a href="nd.edu">University of Notre Dame </a>
+        I'm a third-year student at the <a href="https://nd.edu">University of Notre Dame </a>
         studying CS and philosophy.
         Interested in computer science, programming, math, 
         philosophy, and politics.
