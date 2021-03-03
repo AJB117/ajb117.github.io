@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, navigate } from 'gatsby';
 import '../../styles/blog.css';
+import '../../styles/global.css';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -18,7 +19,7 @@ const Blog = ({
   nodes.forEach(node => console.log(node));
   return (
     <Layout>
-      <div className="blog-front">
+      <div className="blog-front page">
         {
           nodes.map((node, idx) => (
             <Card key={idx} className="blog-card" elevation={0}>

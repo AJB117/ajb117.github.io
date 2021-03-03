@@ -4,7 +4,6 @@ import React from 'react';
 import '../styles/TopBar.css'
 
 const HideOnScroll = ({children, inBlogPost}) => {
-  // const { children } = props;
   const trigger = useScrollTrigger();
   return (
       inBlogPost ? 
@@ -23,8 +22,8 @@ const HideOnScroll = ({children, inBlogPost}) => {
 
 const TopBar = ({ inBlogPost }) => {
   const AppBarStyle = {
-    // background: '#d32f2f',
-    background: '#F5F5F5'
+    background: '#F5F5F5',
+    maxHeight: '50px'
   };
   return (
     <HideOnScroll
@@ -45,11 +44,6 @@ const TopBar = ({ inBlogPost }) => {
             <h2>
               <Link to="/blog">
                 Blog
-              </Link>
-            </h2>
-            <h2>
-              <Link to="/contact">
-                Contact
               </Link>
             </h2>
           </div>

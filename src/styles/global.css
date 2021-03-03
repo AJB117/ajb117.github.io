@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'merriweather-regular';
+  src: url('../../fonts/Merriweather-Light.ttf');
+}
+
+.page {
+  margin-top: 100px;
+}
