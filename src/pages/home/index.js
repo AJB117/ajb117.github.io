@@ -2,7 +2,6 @@ import React from 'react';
 import '../../styles/home.css';
 import '../../styles/global.css';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
 import Interests from './Interests';
 import Email from './Email';
 import Description from './Description';

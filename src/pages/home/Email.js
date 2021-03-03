@@ -4,7 +4,9 @@ import '../../styles/global.css';
 
 const Email = () => {
   return (
-    <p>psoga343@gmail.com</p>
+    <p>
+      <a href="mailto:psoga343@gmail.com">psoga343@gmail.com</a>
+    </p>
   )
 }
 
