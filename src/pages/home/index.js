@@ -34,6 +34,8 @@ const Home = () => {
       </div>
 
       <div className="interests">
+        I'm a third-year student at the <a href="nd.edu">University of Notre Dame </a>
+        studying CS and philosophy.
         Interested in computer science, programming, math, 
         philosophy, and politics.
       </div>
