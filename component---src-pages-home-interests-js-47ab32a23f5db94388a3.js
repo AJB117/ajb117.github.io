@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{SJKF:function(e,t,n){},"Sf/V":function(e,t,n){"use strict";n.r(t);var i=n("q1tI"),a=n.n(i);n("SJKF"),n("rMck");t.default=function(){return a.a.createElement("div",{className:"interests"},"I'm a third-year student at the ",a.a.createElement("a",{href:"https://nd.edu"},"University of Notre Dame "),"studying CS and philosophy. Interested in computer science, programming, math, philosophy, and politics.")}},rMck:function(e,t,n){}}]);
+//# sourceMappingURL=component---src-pages-home-interests-js-47ab32a23f5db94388a3.js.map
