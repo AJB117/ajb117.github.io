@@ -16,7 +16,6 @@ const Blog = ({
       } 
     }
   }) => {
-  nodes.forEach(node => console.log(node));
   return (
     <Layout>
       <div className="blog-front page">
