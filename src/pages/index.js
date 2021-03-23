@@ -10,6 +10,8 @@ export default function HomeIndex() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta name="description" content="Patrick Soga's personal website"/>
+        <meta name="author" content="Patrick Soga, AJB117"/>
         <title>AJB117</title>
       </Helmet>
       <Layout>

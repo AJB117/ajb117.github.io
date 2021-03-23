@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { CardActionArea } from '@material-ui/core';
 import Layout from '../../components/Layout';
+import { Helmet } from 'react-helmet';
 
 const Blog = ({ 
     data: {
@@ -17,29 +18,35 @@ const Blog = ({
     }
   }) => {
   return (
-    <Layout>
-      <div className="blog-front page">
-        {
-          nodes.map((node, idx) => (
-            <Card key={idx} className="blog-card" elevation={0}>
-              <CardActionArea onClick={() => {navigate(node.frontmatter.slug)}}>
-                <CardContent>
-                  <Typography color="textSecondary" gutterBottom>
-                    {node.frontmatter.date}
-                  </Typography>
-                  <Typography variant="h5" component="h2">
-                    {node.frontmatter.title}
-                  </Typography>
-                  <Typography variant="body2" component="p">
-                    {node.excerpt}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          ))
-        }
-      </div>
-    </Layout>
+    <>
+      <Helmet>
+        <meta name="author" content="Patrick Soga, AJB117"/>
+        <title>AJB117 Blog</title>
+      </Helmet>
+      <Layout>
+        <div className="blog-front page">
+          {
+            nodes.map((node, idx) => (
+              <Card key={idx} className="blog-card" elevation={0}>
+                <CardActionArea onClick={() => {navigate(node.frontmatter.slug)}}>
+                  <CardContent>
+                    <Typography color="textSecondary" gutterBottom>
+                      {node.frontmatter.date}
+                    </Typography>
+                    <Typography variant="h5" component="h2">
+                      {node.frontmatter.title}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {node.excerpt}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            ))
+          }
+        </div>
+      </Layout>
+    </>
   )
 }
 

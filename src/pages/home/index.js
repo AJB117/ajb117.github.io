@@ -6,24 +6,30 @@ import Interests from './Interests';
 import Email from './Email';
 import Description from './Description';
 import Links from './Links';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   return (
-    <div className="home-content page"> 
-      <StaticImage
-        className="photo"
-        src="../../../static/photo.jpg"
-        alt="me"
-        title="me"
-        height={300}
-        layout="fixed"
-        placeholder="blurred"
-      />
-      <Description/> 
-      <Links/>
-      <Interests/>
-      <Email/>
-    </div>
+    <>
+      <Helmet>
+        <meta name="author" content="Patrick Soga, AJB117"/>
+      </Helmet>
+      <div className="home-content page"> 
+        <StaticImage
+          className="photo"
+          src="../../../static/photo.jpg"
+          alt="me"
+          title="me"
+          height={300}
+          layout="fixed"
+          placeholder="blurred"
+        />
+        <Description/> 
+        <Links/>
+        <Interests/>
+        <Email/>
+      </div>
+    </>
   )
 }
 
