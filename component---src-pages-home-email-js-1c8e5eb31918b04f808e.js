@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"9otB":function(n,t,c){"use strict";c.r(t);var o=c("q1tI"),e=c.n(o);c("SJKF"),c("rMck");t.default=function(){return e.a.createElement("p",null,"psoga343@gmail.com")}},SJKF:function(n,t,c){},rMck:function(n,t,c){}}]);
-//# sourceMappingURL=component---src-pages-home-email-js-1c8e5eb31918b04f808e.js.map

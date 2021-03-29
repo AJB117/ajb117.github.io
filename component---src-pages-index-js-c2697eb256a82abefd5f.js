@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{RXBc:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return o}));var a=t("q1tI"),r=t.n(a),l=t("Wbzz");function o(){return r.a.createElement(r.a.Fragment,null,r.a.createElement("div",null,"Hello world!"),r.a.createElement(l.a,{to:"/blog/first-page"},"First page"))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-c2697eb256a82abefd5f.js.map
