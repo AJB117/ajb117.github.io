@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import './blogPostTemplate.css'
-import '../styles/global.css';
+import "./blogPostTemplate.css"
+import "../styles/global.css"
 import Layout from "../components/Layout"
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -11,9 +11,9 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <>
+    <div>
       <Helmet>
-        <meta name="author" content="Patrick Soga, AJB117"/>
+        <meta name="author" content="Patrick Soga, AJB117" />
         <title>{frontmatter.title}</title>
       </Helmet>
       <Layout inBlogPost={true}>
@@ -30,7 +30,7 @@ export default function Template({
           </div>
         </div>
       </Layout>
-    </>
+    </div>
   )
 }
 export const pageQuery = graphql`

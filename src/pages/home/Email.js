@@ -1,6 +1,6 @@
-import React from 'react';
-import '../../styles/home.css';
-import '../../styles/global.css';
+import React from "react"
+import "../../styles/home.css"
+import "../../styles/global.css"
 
 const Email = () => {
   return (
@@ -10,4 +10,4 @@ const Email = () => {
   )
 }
 
-export default Email;
+export default Email
