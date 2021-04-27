@@ -5,11 +5,8 @@ const Layout = ({ children, inBlogPost }) => {
 
   return (
     <div>
-      {/* <topBarCtx.Provider value={value}> */}
-        {/* <TopBar inBlogPost={inBlogPost}/> */}
-        <TopBar/>
-        {children}
-      {/* </topBarCtx.Provider> */}
+      <TopBar inBlogPost={inBlogPost}/>
+      {children}
     </div>
   )
 }

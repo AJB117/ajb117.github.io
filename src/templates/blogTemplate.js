@@ -17,8 +17,7 @@ export default function Template({
         <meta name="author" content="Patrick Soga, AJB117" />
         <title>{frontmatter.title}</title>
       </Helmet>
-      {/* <Layout inBlogPost={true}> */}
-      <Layout>
+      <Layout inBlogPost={true}>
         <div className="blog-post-container page">
           <div className="blog-post">
             <div className="blog-post-header">

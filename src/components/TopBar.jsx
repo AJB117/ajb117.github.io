@@ -21,7 +21,6 @@ const HideOnScroll = ({children, inBlogPost}) => {
 }
 
 const TopBar = ({ inBlogPost }) => {
-// const TopBar = () => {
   const AppBarStyle = {
     background: '#F5F5F5',
     maxHeight: '50px'
