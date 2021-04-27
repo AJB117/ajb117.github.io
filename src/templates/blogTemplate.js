@@ -10,13 +10,15 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
   return (
     <div>
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
         <title>{frontmatter.title}</title>
       </Helmet>
-      <Layout inBlogPost={true}>
+      {/* <Layout inBlogPost={true}> */}
+      <Layout>
         <div className="blog-post-container page">
           <div className="blog-post">
             <div className="blog-post-header">

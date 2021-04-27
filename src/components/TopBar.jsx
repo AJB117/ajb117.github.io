@@ -1,7 +1,7 @@
 import { AppBar, Slide, Toolbar, useScrollTrigger } from '@material-ui/core';
 import { Link } from 'gatsby';
 import React from 'react';
-import '../styles/TopBar.css'
+import '../styles/TopBar.css';
 
 const HideOnScroll = ({children, inBlogPost}) => {
   const trigger = useScrollTrigger();
@@ -21,6 +21,7 @@ const HideOnScroll = ({children, inBlogPost}) => {
 }
 
 const TopBar = ({ inBlogPost }) => {
+// const TopBar = () => {
   const AppBarStyle = {
     background: '#F5F5F5',
     maxHeight: '50px'

@@ -14,7 +14,9 @@
   max-width: 45%;
 }
 
-.description, .links, .interests {
+.description,
+.links,
+.interests {
   font-size: 0.875rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
@@ -26,7 +28,7 @@
   max-width: 40%;
 }
 
-@media (pointer:none), (pointer:coarse) {
+@media (pointer: none), (pointer: coarse) {
   .home-content > .photo {
     margin: 0 auto;
   }
