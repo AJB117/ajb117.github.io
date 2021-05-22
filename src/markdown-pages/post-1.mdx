@@ -1,0 +1,63 @@
+---
+slug: "/blog/first-post"
+date: "2021-05-21"
+title: "First post - MDX"
+---
+
+import HelloThere from "../components/post-1-components/HelloThere.jsx"
+import TodoApp from "../components/post-1-components/TodoApp.jsx"
+import mdxPng from "../../static/mdx.png"
+
+## Hello, there.
+
+<center>
+  <HelloThere />
+</center>
+
+This is my blog. It's quite small now, but I hope to grow it in the future.
+
+I started this website a couple of months ago when I had more time, but I decided to finally
+make some progress on it by writing an actual post. Whereas I only had a basic home page and some sample
+pages before, I want to start adding articles on topics of my interest.
+
+This post will be a bit shorter, but I just thought to give an update on a quick change I've made to the blog.
+Before, I was using plain old Markdown for blog posts using
+[ `gatsby-transformer-remark` ](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/) to parse the Markdown files
+I place in my `pages` folder. But then I realized that if I wanted to do anything more complicated than present
+text, images, and tables, I would need something more powerful. Specifically, I'm hoping to integrate some
+Javascript-driven features to blog posts (e.g. visualization with D3, brief interactive demos, in-browser inference, etc.)
+in the future, and all of that would be made much easier if I could just insert React components whenever I needed.
+
+After some browsing, I found [MDX](https://mdxjs.com/). As the name suggests, it lets you write JSX within Markdown, allowing
+for better interactivity within Markdown posts. To show it off, here's a <!-- markdownlint-capture --> todo "app" within this post's Markdown content:
+
+<center>
+  <TodoApp />
+</center>
+
+I thought this was pretty neat. I can imagine putting more complicated functionality into blog posts.
+
+## Using MDX with Gatsby
+
+The process for integrating MDX into Gatsby was not as clean as using plain Markdown. There were a couple of things that needed
+tweaking:
+
+1. Adjusting GraphQL queries to fetch MDX instead of Markdown.
+2. Plugins: using [`gatsby-plugin-mdx`](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/) was straightforward enough, but getting math to show up wasn't as clear.
+
+Part 1 was very simple. Save for some minor tweaks, it was enough to inspect GraphiQL and look at some of the examples
+from the `gatsby-plugin-mdx` docs. Part 2, however, took a bit more work. The MDX docs don't have much guidance
+for using MDX with Gatsby (but there is a section for Next.js), and it seemed like some other people were having
+similar issues getting math to show up. Eventually, I settled on the following:
+
+<center>
+  <img src={mdxPng} width="70%" />
+</center>
+
+A couple of things: don't try to get `remark-html-katex` working (it won't), and don't forget to import
+the katex stylesheet (`katex/dist/katex.min.css`) in the template you're using to serve your MDX.
+Now I can write math in my MDX! A nice, quick fact:
+
+$$
+  \forall A, (|A| \succcurlyeq \mathbb{N} \implies A \precneqq |\{f \mid f\colon A \to \{0,1\}\}|)
+$$

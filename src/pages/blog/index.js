@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, navigate } from "gatsby"
 import "../../styles/blog.css"
 import "../../styles/global.css"
-
 import Card from "@material-ui/core/Card"
 import CardContent from "@material-ui/core/CardContent"
 import Typography from "@material-ui/core/Typography"
@@ -12,7 +11,7 @@ import { Helmet } from "react-helmet"
 
 const Blog = ({
   data: {
-    allMarkdownRemark: { nodes },
+    allMdx: { edges },
   },
 }) => {
   return (
@@ -23,22 +22,22 @@ const Blog = ({
       </Helmet>
       <Layout>
         <div className="blog-front page">
-          {nodes.map((node, idx) => (
+          {edges.map((edge, idx) => (
             <Card key={idx} className="blog-card" elevation={0}>
               <CardActionArea
                 onClick={() => {
-                  navigate(node.frontmatter.slug)
+                  navigate(edge.node.frontmatter.slug)
                 }}
               >
                 <CardContent>
                   <Typography color="textSecondary" gutterBottom>
-                    {node.frontmatter.date}
+                    {edge.node.frontmatter.date}
                   </Typography>
                   <Typography variant="h5" component="h2">
-                    {node.frontmatter.title}
+                    {edge.node.frontmatter.title}
                   </Typography>
                   <Typography variant="body2" component="p">
-                    {node.excerpt}
+                    {edge.node.excerpt}
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -53,14 +52,16 @@ const Blog = ({
 export default Blog
 
 export const blogQuery = graphql`
-  query AllQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      nodes {
-        excerpt(pruneLength: 250)
-        frontmatter {
-          slug
-          title
-          date
+  query {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          excerpt(pruneLength: 150)
+          frontmatter {
+            slug
+            title
+            date
+          }
         }
       }
     }

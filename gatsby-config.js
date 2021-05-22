@@ -5,7 +5,6 @@
  */
 
 module.exports = {
-  /* Your site config here */
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -17,14 +16,16 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        remarkPlugins: [require(`remark-math`)],
+        rehypePlugins: [require(`rehype-katex`)],
+        plugins: [`gatsby-remark-images`],
+        gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              strict: `ignore`
-            },
+            resolve: `gatsby-remark-images`,
+            options: { maxWidth: 800 },
           },
         ],
       },
