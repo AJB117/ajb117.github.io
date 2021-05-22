@@ -6,7 +6,7 @@ const Description = () => {
   return (
     <div className="description">
       <p>
-        Patrick Soga's personal site. Under construction. Written with{" "}
+        Patrick Soga's personal site. Written with{" "}
         <a href="https://www.gatsbyjs.com/">Gatsby.</a>
       </p>
     </div>

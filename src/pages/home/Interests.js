@@ -5,7 +5,7 @@ import "../../styles/global.css"
 const Interests = () => {
   return (
     <div className="interests">
-      I'm a third-year student at the{" "}
+      I'm an incoming senior at the{" "}
       <a href="https://nd.edu">University of Notre Dame </a>
       studying <a href="http://cse.nd.edu/">CS</a> and{" "}
       <a href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/">

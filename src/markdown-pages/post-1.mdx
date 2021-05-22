@@ -54,9 +54,11 @@ similar issues getting math to show up. Eventually, I settled on the following:
   <img src={mdxPng} width="70%" />
 </center>
 
-A couple of things: don't try to get `remark-html-katex` working (it won't), and don't forget to import
-the katex stylesheet (`katex/dist/katex.min.css`) in the template you're using to serve your MDX.
-Now I can write math in my MDX! A nice, quick fact:
+I couldn't get `remark-html-katex` working, but I found that `rehype-katex` did. I just put it in the
+`rehypePlugins` for `gatsby-plugin-mdx`. I also forgot to import
+the katex stylesheet (`katex/dist/katex.min.css`) in my blog post template, which resulted in
+the raw LaTeX appearing with some un-styled text.
+But now I can write math in my MDX! A nice, quick fact:
 
 $$
   \forall A, (|A| \succcurlyeq \mathbb{N} \implies A \precneqq |\{f \mid f\colon A \to \{0,1\}\}|)
