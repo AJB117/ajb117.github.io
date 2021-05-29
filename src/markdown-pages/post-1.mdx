@@ -1,5 +1,5 @@
 ---
-slug: "/blog/first-post"
+slug: "/blog/first-post-mdx"
 date: "2021-05-21"
 title: "First post - MDX"
 ---
@@ -25,11 +25,11 @@ Before, I was using plain old Markdown for blog posts using
 [ `gatsby-transformer-remark` ](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/) to parse the Markdown files
 I place in my `pages` folder. But then I realized that if I wanted to do anything more complicated than present
 text, images, and tables, I would need something more powerful. Specifically, I'm hoping to integrate some
-Javascript-driven features to blog posts (e.g. visualization with D3, brief interactive demos, in-browser inference, etc.)
+Javascript-driven features to blog posts (e.g. visualization, brief interactive demos, in-browser inference, etc.)
 in the future, and all of that would be made much easier if I could just insert React components whenever I needed.
 
 After some browsing, I found [MDX](https://mdxjs.com/). As the name suggests, it lets you write JSX within Markdown, allowing
-for better interactivity within Markdown posts. To show it off, here's a <!-- markdownlint-capture --> todo "app" within this post's Markdown content:
+for better interactivity within Markdown posts. To show it off, here's a cute todo "app" within this post's Markdown content:
 
 <center>
   <TodoApp />

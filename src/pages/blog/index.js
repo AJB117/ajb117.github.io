@@ -56,7 +56,7 @@ export const blogQuery = graphql`
     allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 150)
+          excerpt(pruneLength: 225)
           frontmatter {
             slug
             title
