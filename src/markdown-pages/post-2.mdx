@@ -32,14 +32,14 @@ For notation's sake, let's call our string $S = s_0s_1\dots s_n$ where each $s_i
 
 The most straightforward solution would begin by first sorting the digits of $S$ in descending order.
 Then, we iterate through the digits from right to left in order to maintain the largest possible integer.
-On digit $s_i$, we test whether $(\Sigma_{j=0}^n) - s_i$ is divisible by 3. If it is, then
+On digit $s_i$, we test whether $(\Sigma_{j=0}^n s_j) - s_i$ is divisible by 3. If it is, then
 we return $S$ without $s_i$. Otherwise, we continue.
 
 We repeat this same process, removing an increasing number of characters from $S$, until the number
 of characters removed is equal to $n$, in which case we return 0. For example,
-on our second round, for each pair $s_m, s_n$ in $S$ working from
-right to left, we would test whether $(\Sigma_{j=0}^n s_j) - s_m - s_n$ is divisible by 3. If it is,
-then we would return $S$ without $s_m$ and $s_n$. Otherwise, we continue.
+on our second round, for each pair $s_l, s_m$ in $S$ working from
+right to left, we would test whether $(\Sigma_{j=0}^n s_j) - s_l - s_m$ is divisible by 3. If it is,
+then we would return $S$ without $s_l$ and $s_m$. Otherwise, we continue.
 
 It's easy to see why this solution isn't very efficient. We do one pass of $S$ for each digit
 being considered for removal, and the number of digits being considered for removal increases linearly.
