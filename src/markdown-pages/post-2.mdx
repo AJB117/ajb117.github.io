@@ -1,0 +1,117 @@
+---
+slug: "/blog/groups-and-digits"
+date: "2021-05-28"
+title: "Groups and Digits"
+---
+
+I worked through Google's Foobar challenge a couple of months ago, and I
+managed to get through round 3, but stopped at round 4 when final exams started up.
+I thought one of the problems involved some nice insights that can be explained with
+some essential group theory, so I want to write about how it's solved. I don't remember the exact prompt,
+and I won't be showing any explicit code in this post in the spirit of the challenge, but I hope
+this will be an interesting read.
+
+## Prompt and examples
+
+Given a string representation of an integer, write a function that proceeds as follows:
+
+- Permitting only the removal and rearrangement of digits from the input string,
+  return a string representing the largest possible non-zero integer
+  the sum of whose digits is divisible by 3.
+- If the above is impossible, then return 0.
+
+Some examples:
+
+- `f('369') = '963'` since 9 + 6 + 3 = 18 = 3 \* 6.
+- `f('134') = '3'` since we remove `1` and `4`, and 3 = 3 \* 1.
+- `f('1100') = '0'` since removing either `1` can't yield a number whose digits sum to a multiple of 3, so we return 0.
+
+For notation's sake, let's call our string $S = s_0s_1\dots s_n$ where each $s_i$ is a digit.
+
+## Naive solution
+
+The most straightforward solution would begin by first sorting the digits of $S$ in descending order.
+Then, we iterate through the digits from right to left in order to maintain the largest possible integer.
+On digit $s_i$, we test whether $(\Sigma_{j=0}^n s_j) - s_i$ is divisible by 3. If it is, then
+we return $S$ without $s_i$. Otherwise, we continue.
+
+We repeat this same process, removing an increasing number of characters from $S$, until the number
+of characters removed is equal to $n$, in which case we return 0. For example,
+on our second round, for each pair $s_l, s_m$ in $S$ working from
+right to left, we would test whether $(\Sigma_{j=0}^n s_j) - s_l - s_m$ is divisible by 3. If it is,
+then we would return $S$ without $s_l$ and $s_m$. Otherwise, we continue.
+
+It's easy to see why this solution isn't very efficient. We do one pass of $S$ for each digit
+being considered for removal, and the number of digits being considered for removal increases linearly.
+The algorithm quickly takes at least quadratic time, and this won't do, especially for long strings.
+
+## A better solution
+
+We can keep the previous solution's decision to sort the digits of $S$ in descending order.
+The difference is that, now, we'll be smart about which digits to remove. I'll use some group theory
+to explain.
+
+First, consider $\mathbb{Z}_3 = \{0, 1, 2\}$. It's comprised of all of the possible values of
+any integer mod 3. I.e., take any integer, and its remainder when divided by 3 will always be in $\mathbb{Z}_3$.
+So, $(\Sigma_{j=0}^n s_j)$ % $3$ will always be either 0, 1, or 2. Simple enough.
+
+Now, consider the quotient group $\mathbb{Z}/3\mathbb{Z}$. It contains all of the following:
+
+$$
+  \{\dots, -3, 0, 3, 6, \dots\}, \\
+  \{\dots, -2, 1, 4, 7, \dots\}, \\
+  \{\dots, -1, 2, 5, 8, \dots\}
+$$
+
+Naturally, we see the elements of $\mathbb{Z}_3$ in the elements of $\mathbb{Z}/3\mathbb{Z}$ by their respective
+cosets ($0 + 3\mathbb{Z}, 1 + 3\mathbb{Z}, 2 + 3\mathbb{Z}$).
+
+A nice feature of groups is closure, and we see this clearly demonstrated in $\mathbb{Z}/3\mathbb{Z}$:
+e.g. for any $a \in 2 + 3\mathbb{Z}$ and $b \in 1 + 3\mathbb{Z}$,
+$\\ a + b = c \in 0 + 3\mathbb{Z}$. Similarly, for any $a, b \in 2 + 3\mathbb{Z}$,
+we see $a + b = c \in 1 + 3 \mathbb{Z}$. Something similar occurs for $a, b \in 1 + 3 \mathbb{Z}$
+as you might infer.
+
+The key point is that getting to an element in a certain coset in $\mathbb{Z}/3\mathbb{Z}$
+can be thought of as either starting in that coset and adding/subtracting 3 until the element is reached,
+or starting in one of the other cosets and adding elements of the other cosets to reach the element.
+For instance, 5 = 3 + 1 + 1, 9 = 5 + 4, or 2 = 4 + 7 (mod 3).
+
+With this, returning to digits, we can say that, if $(\Sigma_{j=0}^n s_j)$ % $3 = 1$, either:
+
+- $S$ contains a 1, 4, or 7, and the rest of $s_i$ sum to a number divisible by 3.
+- $S$ contains two of the following: 2, 5, 8, and the rest of the $s_i$ sum to a number divisible by 3.
+
+Similarly, if $(\Sigma_{j=0}^n s_j)$ % $3 = 2$, either:
+
+- $S$ contains a 2, 5, or 8, and the rest of $s_i$ sum to a number divisible by 3.
+- $S$ contains two of the following: 1, 4, 7, and the rest of $s_i$ sum to a number divisible by 3.
+
+While it's also true that if, say $(\Sigma_{j=0}^n s_j)$ % $3 = 1$, then we could have four 1s or two 7s and two 1s,
+the nice part about a group of order 3 is that it's cyclic (per Lagrange's theorem), so you won't ever have
+to remove more than 2 digits from $S$.
+
+So now, we have a much nicer algorithm than the naive solution.
+
+- Sort $S$ by descending order.
+- As long as $S$ has digits,
+  - If $\Sigma s_j$ is divisible by 3, return the sorted $S$.
+  - If $\Sigma s_j$ % 3 = 1,
+    - If $S$ contains a 1, remove the rightmost 1 and continue. Otherwise, do similarly for 4. Otherwise, do similarly for 7.
+    - If $S$ does not contain a 1, 4, or 7, then remove the rightmost occurrences of the smallest pair of digits in {2, 5, 8}.
+  - If $\Sigma s_j$ % 3 = 2,
+    - If $S$ contains a 2, remove the rightmost 2 and continue. Otherwise, do similarly for 5. Otherwise, do similarly for 8.
+    - If $S$ does not contain a 2, 5, or 8, then remove the rightmost occurrences of the smallest pair of digits in {1, 4, 7}.
+- Return 0.
+
+This will finish in O(n) time, which is a welcome improvement to the previous algorithm.
+
+## Done
+
+You can probably see how this more complicated for versions of the problem that check
+for divisibility by other numbers other than 3. Say we check for divisibility by 4. A remainder of 1
+could mean we remove a 1, 5, or 9, or a 2 and a 3, or a 6 and a 3. A remainder of 2 could mean we remove
+a 2 or 6, or two 1s, or a 1 and a 5, or two 3s. The divisibility by 3 case is easier to think about.
+
+Hopefully this was a fun read. By no means should you need any of the above group theory stuff
+to solve the original problem, but it was cool to explore how it can explain one of the problem's solutions.
