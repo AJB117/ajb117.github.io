@@ -11,7 +11,7 @@ const Links = () => {
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
       <div className="links">
-        <a href="cv.pdf" download>
+        <a href="cv.pdf" embed>
           CV &#8226;{" "}
         </a>
         <Link to="/blog">Blog &#8226;</Link>
