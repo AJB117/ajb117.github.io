@@ -1,12 +1,13 @@
 .home-content {
-  margin: 0 auto;
-  max-width: 800px;
-  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .home-content > .photo {
-  float: right;
-  margin-right: 20%;
+  margin: auto;
 }
 
 .home-content > .interests {
@@ -30,11 +31,11 @@
 
 @media (pointer: none), (pointer: coarse) {
   .home-content > .photo {
-    margin: 0 auto;
+    margin: auto;
   }
 
   .home-content > * {
-    padding-left: 5px;
+    /* padding-left: 5px; */
     font-size: 14px;
   }
 }

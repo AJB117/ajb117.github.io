@@ -10,26 +10,28 @@ import { Helmet } from "react-helmet"
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
       <div className="home-content page">
+        <div>
+          <Description />
+          <Links />
+          <Interests />
+          <Email />
+        </div>
         <StaticImage
           className="photo"
           src="../../../static/photo.jpg"
           alt="me"
           title="me"
-          height={300}
+          height={250}
           layout="fixed"
           placeholder="blurred"
         />
-        <Description />
-        <Links />
-        <Interests />
-        <Email />
       </div>
-    </>
+    </div>
   )
 }
 
