@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[801],{7444:function(e,t,r){"use strict";r.r(t);var l=r(7294);t.default=function(){return l.createElement("div",{className:"blurb"})}}}]);
+//# sourceMappingURL=component---src-pages-home-blurb-js-6158ae4835c8ab58fe5d.js.map
