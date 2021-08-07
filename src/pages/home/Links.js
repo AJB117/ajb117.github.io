@@ -10,17 +10,17 @@ const Links = () => {
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
-      <div className="links">
+      <section className="links">
         <a href="cv.pdf" embed>
-          CV &#8226;{" "}
+          cv &#8226;{" "}
         </a>
-        <Link to="/blog">Blog &#8226;</Link>
+        <Link to="/blog">blog &#8226;</Link>
         <a href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
           {" "}
-          LinkedIn &#8226;{" "}
+          linkedin &#8226;{" "}
         </a>
-        <a href="https://github.com/AJB117">Github</a>
-      </div>
+        <a href="https://github.com/AJB117">github</a>
+      </section>
     </>
   )
 }

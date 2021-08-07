@@ -10,17 +10,17 @@ import { Helmet } from "react-helmet"
 
 const Home = () => {
   return (
-    <div>
+    <section>
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
-      <div className="home-content page">
-        <div>
+      <section className="home-content page">
+        <section className="notphoto">
           <Description />
           <Links />
           <Interests />
           <Email />
-        </div>
+        </section>
         <StaticImage
           className="photo"
           src="../../../static/photo.jpg"
@@ -30,8 +30,8 @@ const Home = () => {
           layout="fixed"
           placeholder="blurred"
         />
-      </div>
-    </div>
+      </section>
+    </section>
   )
 }
 

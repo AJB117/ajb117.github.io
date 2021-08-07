@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography"
 import { CardActionArea } from "@material-ui/core"
 import Layout from "../../components/Layout"
 import { Helmet } from "react-helmet"
+import { isMobile } from "react-device-detect"
 
 const Blog = ({
   data: {
@@ -21,9 +22,9 @@ const Blog = ({
         <title>AJB117 Blog</title>
       </Helmet>
       <Layout>
-        <div className="blog-front page">
+        <section className="blog-front page">
           {edges.map((edge, idx) => (
-            <Card key={idx} className="blog-card" elevation={0}>
+            <Card key={idx} className="blog-card" elevation={isMobile ? 4 : 0}>
               <CardActionArea
                 onClick={() => {
                   navigate(edge.node.frontmatter.slug)
@@ -43,7 +44,7 @@ const Blog = ({
               </CardActionArea>
             </Card>
           ))}
-        </div>
+        </section>
       </Layout>
     </>
   )

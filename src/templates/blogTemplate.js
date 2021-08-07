@@ -13,25 +13,23 @@ export default function Template({
   },
 }) {
   return (
-    <div>
+    <section>
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
         <title>{frontmatter.title}</title>
       </Helmet>
       <Layout inBlogPost={true}>
-        <div className="blog-post-container page">
-          <div className="blog-post">
-            <div className="blog-post-header">
-              <h2>{frontmatter.title}</h2>
-              <h3>{frontmatter.date}</h3>
-            </div>
-            <div className="blog-post-content">
-              <MDXRenderer>{body}</MDXRenderer>
-            </div>
-          </div>
-        </div>
+        <section className="blog-post-container page">
+          <section className="blog-post-header">
+            <h2>{frontmatter.title}</h2>
+            <h3>{frontmatter.date}</h3>
+          </section>
+          <section className="blog-post-content">
+            <MDXRenderer>{body}</MDXRenderer>
+          </section>
+        </section>
       </Layout>
-    </div>
+    </section>
   )
 }
 

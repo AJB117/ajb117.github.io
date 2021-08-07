@@ -4,12 +4,12 @@ import "../../styles/global.css"
 
 const Description = () => {
   return (
-    <div className="description">
+    <section className="description">
       <p>
         Patrick Soga's personal site. Written with{" "}
         <a href="https://www.gatsbyjs.com/">Gatsby.</a>
       </p>
-    </div>
+    </section>
   )
 }
 
