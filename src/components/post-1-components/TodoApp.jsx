@@ -50,7 +50,7 @@ const TodoApp = () => {
             removePost={handleRemove} 
             key={idx}
           />)
-        : <div></div>
+        : null
       }
 
       <form onSubmit={handleNewPost}>
@@ -59,6 +59,7 @@ const TodoApp = () => {
           onChange={handleChangedPostText} 
           value={todoText}
         />
+        <button type="submit">+</button>
       </form>
     </div>
   )

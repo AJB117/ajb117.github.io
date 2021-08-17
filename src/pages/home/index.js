@@ -15,7 +15,7 @@ const Home = () => {
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
       <section className="home-content page">
-        <section className="notphoto">
+        <section className="not-photo">
           <Description />
           <Links />
           <Interests />

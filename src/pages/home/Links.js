@@ -11,15 +11,17 @@ const Links = () => {
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
       <section className="links">
-        <a href="cv.pdf" embed>
-          cv &#8226;{" "}
-        </a>
-        <Link to="/blog">blog &#8226;</Link>
-        <a href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
-          {" "}
-          linkedin &#8226;{" "}
-        </a>
-        <a href="https://github.com/AJB117">github</a>
+        <p>
+          <a href="cv.pdf" embed>
+            cv &#8226;{" "}
+          </a>
+          <Link to="/blog">blog &#8226;</Link>
+          <a href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
+            {" "}
+            linkedin &#8226;{" "}
+          </a>
+          <a href="https://github.com/AJB117">github</a>
+        </p>
       </section>
     </>
   )

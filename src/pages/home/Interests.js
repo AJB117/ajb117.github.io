@@ -12,8 +12,7 @@ const Interests = () => {
         <a href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/">
           philosophy
         </a>
-        . Interested in computer science, programming, math, philosophy, and
-        politics.
+        .
       </section>
     </section>
   )
