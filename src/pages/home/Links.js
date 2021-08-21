@@ -13,7 +13,7 @@ const Links = () => {
       <section className="links">
         <p>
           <a href="cv.pdf" embed>
-            cv &#8226;{" "}
+            resume &#8226;{" "}
           </a>
           <Link to="/blog">blog &#8226;</Link>
           <a href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
