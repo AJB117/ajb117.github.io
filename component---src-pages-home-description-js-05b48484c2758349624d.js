@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[198],{277:function(e,t,s){s.r(t);var a=s(7294);t.default=function(){return a.createElement("section",{className:"description"},a.createElement("p",null,"Patrick Soga's personal site. Written with"," ",a.createElement("a",{href:"https://www.gatsbyjs.com/"},"Gatsby.")))}}}]);
-//# sourceMappingURL=component---src-pages-home-description-js-05b48484c2758349624d.js.map
