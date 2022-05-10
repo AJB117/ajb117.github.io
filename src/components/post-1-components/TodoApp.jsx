@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 
-const Todo = ({ todo, idx, removePost}) => {
+const Todo = ({ todo, idx, removePost }) => {
+  const [completed, setComplete] = useState(false);
   return (
     <div>
-      <li style={{display: 'inline-block'}}>
+      <li
+        style={{display: 'inline-block', textDecoration: completed ? 'line-through' : ''}}
+      >
+        <input type="checkbox"  onChange={(event) => setComplete((prev) => !prev)}/>
         {todo}
       </li>
       <button 
@@ -22,7 +26,7 @@ const TodoApp = () => {
     e.preventDefault()
     setTodoText(e.target.value)
   }
-  
+
   const handleNewPost = (e) => {
     e.preventDefault()
     if (!todoText) {
