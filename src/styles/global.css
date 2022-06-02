@@ -6,3 +6,26 @@
 .page {
   margin-top: 100px;
 }
+
+.name {
+  position: relative;
+  display: inline-block;
+}
+
+.nameText {
+  visibility: hidden;
+  /* width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  position: absolute;
+  z-index: 1; */
+  font-size: small;
+}
+
+.name:hover .nameText {
+  visibility: visible;
+}

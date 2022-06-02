@@ -10,26 +10,27 @@ import { Helmet } from "react-helmet"
 
 const Home = () => {
   return (
-    <section>
+    <section style={{}}>
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
       <section className="home-content page">
+        <StaticImage
+          className="photo"
+          src="../../../static/photo.jpg"
+          alt="me"
+          title="me"
+          height={300}
+          layout="fixed"
+          imgStyle={{ objectFit: "contain" }}
+          placeholder="blurred"
+        />
         <section className="not-photo">
           <Description />
           <Links />
           <Interests />
           <Email />
         </section>
-        <StaticImage
-          className="photo"
-          src="../../../static/photo.jpg"
-          alt="me"
-          title="me"
-          height={250}
-          layout="fixed"
-          placeholder="blurred"
-        />
       </section>
     </section>
   )
