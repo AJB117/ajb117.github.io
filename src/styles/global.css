@@ -26,6 +26,6 @@
   font-size: small;
 }
 
-.name:hover .nameText {
+.name:hover + .nameText {
   visibility: visible;
 }
