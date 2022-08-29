@@ -19,7 +19,6 @@ const Blog = ({
     <>
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
-        <title>AJB117 Blog</title>
       </Helmet>
       <Layout>
         <section className="blog-front page">

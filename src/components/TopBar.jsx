@@ -43,7 +43,7 @@ const TopBar = ({ inBlogPost }) => {
             </h2>
             <h2>
               <Link to="/blog">
-                Blog
+                Posts
               </Link>
             </h2>
           </div>
