@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet"
 const Interests = () => {
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta name="author" content="Patrick Soga" />
       </Helmet>
       <p></p>
@@ -17,7 +17,7 @@ const Interests = () => {
           ML methods for NLP tasks like knowledge-aware NMT and
           question-answering.
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
