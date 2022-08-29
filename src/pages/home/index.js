@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 
 const Home = () => {
   return (
-    <section>
+    <section style={{}}>
       <Helmet>
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
@@ -28,8 +28,9 @@ const Home = () => {
           src="../../../static/photo.jpg"
           alt="me"
           title="me"
-          height={250}
+          height={300}
           layout="fixed"
+          imgStyle={{ objectFit: "contain" }}
           placeholder="blurred"
         />
       </section>
