@@ -6,7 +6,7 @@ const Description = () => {
   return (
     <section className="description">
       <h2 style={{ margin: 0, padding: 0 }} className="name">
-        Patrick M. Soga
+        Patrick Soga
       </h2>
       <div className="nameText">
         <ruby>
