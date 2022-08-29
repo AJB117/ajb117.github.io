@@ -2,9 +2,10 @@ import React from "react"
 import "../../styles/home.css"
 import "../../styles/global.css"
 import { StaticImage } from "gatsby-plugin-image"
-import Interests from "./Interests"
+import Intro from "./Intro"
 import Email from "./Email"
 import Description from "./Description"
+import Interests from "./Interests"
 import Links from "./Links"
 import { Helmet } from "react-helmet"
 
@@ -18,6 +19,7 @@ const Home = () => {
         <section className="not-photo">
           <Description />
           <Links />
+          <Intro />
           <Interests />
           <Email />
         </section>

@@ -8,7 +8,7 @@ const Links = () => {
   return (
     <>
       <Helmet>
-        <meta name="author" content="Patrick Soga, AJB117" />
+        <meta name="author" content="Patrick Soga" />
       </Helmet>
       <section className="links">
         <div>
