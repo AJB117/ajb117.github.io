@@ -3,6 +3,9 @@ import "../../styles/home.css"
 import "../../styles/global.css"
 
 const Interests = () => {
+  const [showBio, setShowBio] = React.useState(false)
+  const showOrHideBioText = showBio ? "Hide" : "Show"
+
   return (
     <section className="interests">
       <section>
@@ -17,9 +20,35 @@ const Interests = () => {
           {" "}
           <div>
             My interests are in graph ML, NLP, and their intersection. More
-            specifically, I'm interested in graph deep learning and applying
-            graph ML methods for NLP tasks like knowledge-aware NMT and
+            specifically, I'm interested in graph deep learning in general and
+            applying graph ML methods for NLP tasks like knowledge-aware NMT and
             question-answering.{" "}
+            <p>
+              <button
+                style={{
+                  background: "none",
+                  border: "none",
+                  margin: "0",
+                  padding: "0",
+                  cursor: "pointer",
+                }}
+                onClick={() => setShowBio(!showBio)}
+              >
+                <span style={{ fontStyle: "italic" }}>
+                  {showOrHideBioText} bio
+                </span>
+              </button>
+              {showBio ? (
+                <div>
+                  At first, I wanted to become a professional philosopher, and
+                  so I read a lot of philosophy of math and logic. Those plans
+                  changed after my second year of college when I learned web and
+                  app development and thought I wanted to be a software
+                  engineer. In my final year, I realized I wanted to pursue a
+                  research career in AI/ML.
+                </div>
+              ) : null}
+            </p>
           </div>{" "}
         </section>
       </section>

@@ -20,7 +20,7 @@ const Home = () => {
           src="../../../static/photo.jpg"
           alt="me"
           title="me"
-          height={300}
+          height={400}
           layout="fixed"
           imgStyle={{ objectFit: "contain" }}
           placeholder="blurred"
@@ -29,7 +29,7 @@ const Home = () => {
           <Description />
           <Links />
           <Interests />
-          <Email />
+          {/* <Email /> */}
         </section>
       </section>
     </section>
