@@ -20,8 +20,8 @@ const Interests = () => {
           {" "}
           <div>
             My interests are in graph ML, NLP, and their intersection. More
-            specifically, I'm interested in graph deep learning in general and
-            applying graph ML methods for NLP tasks like knowledge-aware NMT and
+            specifically, I'm interested in graph deep learning and applying
+            graph ML methods for NLP tasks like knowledge-aware NMT and
             question-answering.{" "}
             <p>
               <button
