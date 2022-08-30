@@ -40,7 +40,7 @@ const Interests = () => {
               </button>
               {showBio ? (
                 <div>
-                  At first, I wanted to become a professional philosopher, and
+                  At first, I wanted to become a professional philosopher, 
                   so I read a lot of philosophy of math and logic. Those plans
                   changed after my second year of college when I learned web and
                   app development and thought I wanted to be a software
