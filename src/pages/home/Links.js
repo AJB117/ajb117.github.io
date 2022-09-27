@@ -29,6 +29,8 @@ const Links = () => {
           </a>
         </div>
         <p></p>
+        <a href="http://nlp.nd.edu">ND Natural Language Processing Group</a>
+        <p></p>
       </section>
     </>
   )
