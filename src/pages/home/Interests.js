@@ -51,6 +51,10 @@ const Interests = () => {
             </p> */}
           </p>{" "}
           <p>I also have some experience in web development.</p>
+          <p>
+            This site is written with{" "}
+            <a href="https://www.gatsbyjs.com/">Gatsby.</a>
+          </p>
         </section>
       </section>
     </section>

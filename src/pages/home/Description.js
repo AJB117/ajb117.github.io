@@ -31,9 +31,6 @@ const Description = () => {
       <p>
         <Email />
       </p>
-      <p>
-        Written with <a href="https://www.gatsbyjs.com/">Gatsby.</a>
-      </p>
     </section>
   )
 }
