@@ -12,7 +12,7 @@ const Links = () => {
       </Helmet>
       <section className="links">
         <div>
-          <a href="cv-10-18-22.pdf" embed>
+          <a href="cv.pdf" embed>
             cv &#8226;{" "}
           </a>
           <Link to="/blog">posts &#8226; </Link>

@@ -9,20 +9,25 @@ const Interests = () => {
   return (
     <section className="interests">
       <section>
-        I'm a senior at the{" "}
+        I'm an undergraduate at the{" "}
         <a href="https://nd.edu">University of Notre Dame </a>
         studying <a href="http://cse.nd.edu/">CS</a> and{" "}
         <a href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/">
           philosophy.
-        </a>
+        </a>{" "}
+        I will graduate this fall.
         {/* . I plan to apply to AI/ML PhD programs this fall.<p></p> */}
         <section className="interests">
           {" "}
           <p>
-            My interests are in graph ML, NLP, and their intersection. More
+            My interests are in graph ML in general, encompassing graph neural
+            networks, knowledge graphs, and data mining. I'm also highly
+            interested in the intersection of graphs and NLP, particularly in
+            question answering and text generation.
+            {/* My interests are in graph ML, NLP, and their intersection. More
             specifically, I'm interested in graph deep learning and applying
-            graph ML methods for NLP tasks like knowledge-aware NMT and
-            question-answering.{" "}
+            graphs to tasks like knowledge-aware generation, question-answering,
+            and data mining for text.{" "} */}
             {/* <p>
               <button
                 style={{
@@ -50,7 +55,7 @@ const Interests = () => {
               ) : null}
             </p> */}
           </p>{" "}
-          <p>I also have some experience in web development.</p>
+          <p>Apart from ML, I also have some experience in web development.</p>
           <p>
             This site is written with{" "}
             <a href="https://www.gatsbyjs.com/">Gatsby.</a>
