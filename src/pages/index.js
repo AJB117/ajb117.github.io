@@ -16,6 +16,10 @@ export default function HomeIndex() {
       <Layout>
         <Home />
       </Layout>
+      <footer>
+        This site was built using{" "}
+        <a href="https://www.gatsbyjs.com/">Gatsby.</a>
+      </footer>
     </>
   )
 }

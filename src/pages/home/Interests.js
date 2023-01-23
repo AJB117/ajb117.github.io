@@ -20,14 +20,8 @@ const Interests = () => {
         <section className="interests">
           {" "}
           <p>
-            My interests are in graph ML in general, encompassing graph neural
-            networks, knowledge graphs, and data mining. I'm also highly
-            interested in the intersection of graphs and NLP, particularly in
-            question answering and text generation.
-            {/* My interests are in graph ML, NLP, and their intersection. More
-            specifically, I'm interested in graph deep learning and applying
-            graphs to tasks like knowledge-aware generation, question-answering,
-            and data mining for text.{" "} */}
+            My interests are in graph ML in general, particularly graph deep
+            learning.
             {/* <p>
               <button
                 style={{
@@ -56,10 +50,6 @@ const Interests = () => {
             </p> */}
           </p>{" "}
           <p>Apart from ML, I also have some experience in web development.</p>
-          <p>
-            This site is written with{" "}
-            <a href="https://www.gatsbyjs.com/">Gatsby.</a>
-          </p>
         </section>
       </section>
     </section>
