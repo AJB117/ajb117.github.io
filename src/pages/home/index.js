@@ -17,6 +17,7 @@ const Home = () => {
       <section className="home-content page">
         <StaticImage
           className="photo"
+          // src="../../../static/IMG_5084-cropped.jpg"
           src="../../../static/photo.jpg"
           alt="me"
           title="me"

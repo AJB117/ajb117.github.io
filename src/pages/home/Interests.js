@@ -9,19 +9,18 @@ const Interests = () => {
   return (
     <section className="interests">
       <section>
-        I'm an undergraduate at the{" "}
+        I just graduated from the{" "}
         <a href="https://nd.edu">University of Notre Dame </a>
-        studying <a href="http://cse.nd.edu/">CS</a> and{" "}
+        with degrees in <a href="http://cse.nd.edu/">CS</a> and{" "}
         <a href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/">
           philosophy.
         </a>{" "}
-        I will graduate this fall.
         {/* . I plan to apply to AI/ML PhD programs this fall.<p></p> */}
         <section className="interests">
           {" "}
           <p>
-            My interests are in graph ML in general, particularly graph deep
-            learning.
+            My interests are in graph ML and its applications. I am currently
+            applying to AI/ML PhD programs.
             {/* <p>
               <button
                 style={{
@@ -49,7 +48,7 @@ const Interests = () => {
               ) : null}
             </p> */}
           </p>{" "}
-          <p>Apart from ML, I also have some experience in web development.</p>
+          <p>I also have some experience in web development.</p>
         </section>
       </section>
     </section>
