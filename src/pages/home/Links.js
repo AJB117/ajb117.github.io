@@ -15,20 +15,17 @@ const Links = () => {
           <a href="cv.pdf" embed>
             cv &#8226;{" "}
           </a>
-          <Link to="/blog">posts &#8226; </Link>
+          {/* <Link to="/blog">posts &#8226; </Link> */}
           <a href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
-            {" "}
-            linkedin
+            linkedin &#8226;
           </a>
-        </div>
-        <div>
           <a href="https://github.com/AJB117"> github (personal) &#8226; </a>
-          <a href="https://github.com/patricksoga">
-            {" "}
-            github (school, more active)
-          </a>
+          <a href="https://github.com/patricksoga"> github (school)</a>
         </div>
-        <p></p>
+        {/* <div>
+          <a href="https://github.com/AJB117"> github (personal) &#8226; </a>
+          <a href="https://github.com/patricksoga"> github (school)</a>
+        </div> */}
         <a href="http://nlp.nd.edu">ND Natural Language Processing Group</a>
         <p></p>
       </section>
