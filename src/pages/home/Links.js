@@ -22,11 +22,7 @@ const Links = () => {
           <a href="https://github.com/AJB117"> github (personal) &#8226; </a>
           <a href="https://github.com/patricksoga"> github (school)</a>
         </div>
-        {/* <div>
-          <a href="https://github.com/AJB117"> github (personal) &#8226; </a>
-          <a href="https://github.com/patricksoga"> github (school)</a>
-        </div> */}
-        <a href="http://nlp.nd.edu">ND Natural Language Processing Group</a>
+        <a href="http://nlp.nd.edu">Group website</a>
         <p></p>
       </section>
     </>
