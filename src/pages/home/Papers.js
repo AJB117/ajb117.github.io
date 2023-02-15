@@ -4,7 +4,8 @@ import { toJSON } from "@orcid/bibtex-parse-js"
 import Paper from "../../components/Paper"
 
 export const ConferenceToAbbrev = Object.freeze({
-  arXiv: "arXiv",
+  arXiv: "Preprint",
+  coRR: "Preprint",
   "International Conference on Machine Learning": "ICML",
   "International Conference on Learning Representations": "ICLR",
   "Conference on Neural Information Processing Systems": "NeurIPS",
@@ -36,24 +37,18 @@ const convertLFToFL = name => {
 }
 
 const joinAuthors = authorArr => {
-  let authorString = ""
-  for (let i = 0; i < authorArr.length; i++) {
-    if (i === authorArr.length - 1) {
-      authorString += authorArr[i]
-    } else {
-      authorString += authorArr[i] + ", "
-    }
-    if (authorArr.length > 2 && i === authorArr.length - 2) {
-      authorString += "and "
-    }
+  if (authorArr.length > 2) {
+    authorArr[authorArr.length - 1] = "and " + authorArr[authorArr.length - 1]
+    return authorArr.join(", ")
   }
-  return authorString
+  return authorArr.join(" and ")
 }
 
 const parsePaperJSON = ({ author, booktitle, title, year, url }) => {
   if (booktitle === undefined) {
-    booktitle = "arXiv"
+    booktitle = "Preprint"
   }
+
   let fixedAuthors = author.split(" and ")
   fixedAuthors = fixedAuthors.map(convertLFToFL)
 
