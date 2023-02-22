@@ -40,7 +40,7 @@ const NewsEntries = [
     date: "Jan 2023",
     text: (
       <>
-        Graduated from Notre Dame with degrees Cum Laude in Computer Science and
+        Graduated from Notre Dame Cum Laude with degrees in Computer Science and
         Philosophy.
       </>
     ),
