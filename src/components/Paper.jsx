@@ -1,11 +1,12 @@
 import React from "react"
-import { ConferenceToAbbrev } from "../pages/home/Papers"
+import { ConferenceToAbbrev } from "../util/PapersUtil"
+import Href from "./Href"
 
 const Paper = ({ author, booktitle, title, year, url }) => {
   return (
     <section className="paper">
       <strong>
-        <a href={url}>{title}</a>
+        <Href href={url}>{title}</Href>
       </strong>
       <section>{author}</section>
       <section>

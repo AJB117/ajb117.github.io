@@ -1,7 +1,4 @@
-import React from "react"
-import YAMLData from "../../../content/content.yml"
 import { toJSON } from "@orcid/bibtex-parse-js"
-import Paper from "../../components/Paper"
 
 export const ConferenceToAbbrev = Object.freeze({
   arXiv: "Preprint",
@@ -26,6 +23,8 @@ export const ConferenceToAbbrev = Object.freeze({
   "International ACM SIGIR Conference on Research and Development in Information Retrieval":
     "SIGIR",
   "International World Wide Web Conference": "WWW",
+  "Transactions on Pattern Analysis and Machine Intelligence": "TPAMI",
+  "Transactions on Machine Learning Research": "TMLR",
 })
 
 const convertLFToFL = name => {
@@ -63,21 +62,8 @@ const parsePaperJSON = ({ author, booktitle, title, year, url }) => {
   }
 }
 
-const parseString = string => {
+export const parseString = string => {
   const paperJSON = toJSON(string)[0].entryTags
   const paperContent = parsePaperJSON(paperJSON)
   return paperContent
 }
-
-const Papers = () => {
-  return (
-    <section className="papers">
-      <h2>Papers</h2>
-      {YAMLData.hi.split(/(?=@)/).map((paper, idx) => {
-        return <Paper {...parseString(paper)} key={idx} />
-      })}
-    </section>
-  )
-}
-
-export default Papers

@@ -6,6 +6,7 @@ import Interests from "./Interests"
 import Description from "./Description"
 import Links from "./Links"
 import Papers from "./Papers"
+import News from "./News"
 import { Helmet } from "react-helmet"
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
           src="../../../static/IMG_5084-cropped.jpg"
           alt="me"
           title="me"
-          height={400}
+          height={350}
           layout="fixed"
           imgStyle={{ objectFit: "contain" }}
           placeholder="blurred"
@@ -32,6 +33,7 @@ const Home = () => {
           <Interests />
         </section>
       </section>
+      <News />
       <Papers />
     </section>
   )

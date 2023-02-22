@@ -13,11 +13,11 @@ const Description = () => {
       >
         <ruby>
           {" "}
-          (曽我 <rt>そが</rt>
+          曽我 <rt>そが</rt>
         </ruby>{" "}
         パトリック{" "}
         <ruby>
-          守杜<rt>もりと</rt>)
+          守杜<rt>もりと</rt>
         </ruby>
       </div>
       <h2

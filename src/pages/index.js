@@ -2,6 +2,7 @@ import React from "react"
 import Home from "./home/index"
 import "../styles/global.css"
 import { Helmet } from "react-helmet"
+import Href from "../components/Href"
 import Layout from "../components/Layout"
 
 export default function HomeIndex() {
@@ -18,7 +19,7 @@ export default function HomeIndex() {
       </Layout>
       <footer>
         This site was built using{" "}
-        <a href="https://www.gatsbyjs.com/">Gatsby.</a>
+        <Href href="https://www.gatsbyjs.com/">Gatsby.</Href>
       </footer>
     </>
   )
