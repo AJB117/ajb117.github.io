@@ -35,26 +35,15 @@ const convertLFToFL = name => {
   return name
 }
 
-const joinAuthors = authorArr => {
-  if (authorArr.length > 2) {
-    authorArr[authorArr.length - 1] = "and " + authorArr[authorArr.length - 1]
-    return authorArr.join(", ")
-  }
-  return authorArr.join(" and ")
-}
-
 const parsePaperJSON = ({ author, booktitle, title, year, url }) => {
   if (booktitle === undefined) {
     booktitle = "Preprint"
   }
 
-  let fixedAuthors = author.split(" and ")
-  fixedAuthors = fixedAuthors.map(convertLFToFL)
-
-  author = joinAuthors(fixedAuthors)
+  const authors = author.split(" and ").map(convertLFToFL)
 
   return {
-    author,
+    authors,
     booktitle,
     title,
     year,

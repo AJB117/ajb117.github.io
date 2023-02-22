@@ -1,15 +1,7 @@
 import React from "react"
+import Href from "../../components/Href"
 import "../../styles/home.css"
 import "../../styles/global.css"
-import Href from "../../components/Href"
-
-const NewsEntry = ({ date, text }) => {
-  return (
-    <li>
-      [{date}] <em>{text}</em>
-    </li>
-  )
-}
 
 const NewsEntries = [
   {
@@ -39,8 +31,8 @@ const NewsEntries = [
         <Href href="https://openreview.net/forum?id=hZftxQGJ4Re">
           "Deep Ensembles for Graphs with Higher-order Dependencies"
         </Href>{" "}
-        (Steven Krieg, William Burgis, Patrick Soga, and Nitesh Chawla), has
-        been accepted ICLR 2023.
+        (Steven Krieg, William Burgis, <b>Patrick Soga</b>, and Nitesh Chawla),
+        has been accepted ICLR 2023.
       </>
     ),
   },
@@ -65,17 +57,17 @@ const NewsEntries = [
   },
 ]
 
-const News = () => {
-  return (
-    <section className="news">
-      <h2>News</h2>
-      <ul>
-        {NewsEntries.slice(0, 8).map((entry, i) => (
-          <NewsEntry key={i} date={entry.date} text={entry.text} />
-        ))}
-      </ul>
-    </section>
-  )
-}
+const News = () => (
+  <section className="news">
+    <h2>News</h2>
+    <ul>
+      {NewsEntries.slice(0, 8).map((newsEntry, idx) => (
+        <li key={idx}>
+          [{newsEntry.date}] <em>{newsEntry.text}</em>
+        </li>
+      ))}
+    </ul>
+  </section>
+)
 
 export default News

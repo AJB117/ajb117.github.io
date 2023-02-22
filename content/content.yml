@@ -1,4 +1,4 @@
-hi: >
+papers: >
   @inproceedings{
   dge,
   title={Deep Ensembles for Graphs with Higher-order Dependencies},
