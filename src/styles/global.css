@@ -32,7 +32,7 @@
 
 @media (max-width: 600px) or (max-height: 600px) {
   .page {
-    margin-top: 50px;
+    margin-top: 65px;
   }
   footer {
     display: none;
