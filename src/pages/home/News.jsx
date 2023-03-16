@@ -8,18 +8,18 @@ const NewsEntries = [
     date: "Mar 2023",
     text: (
       <>
-        Joined the <Href href="http://aiactionlab.com/">MSU ACTION Lab</Href> as
-        a PhD student advised by{" "}
-        <Href href="https://www.egr.msu.edu/~yukong/">Dr. Yu Kong</Href>.
-      </>
-    ),
-  },
-  {
-    date: "Feb 2023",
-    text: (
-      <>
-        Received the University Enrichment Fellowship from Michigan State
-        University (1 of 20 out of ~500 PhD students). Thank you MSU!
+        {/* Our paper,{" "}
+        <Href href="https://arxiv.org/pdf/2212.06898.pdf">
+          "Bridging Graph Position Encodings for Transformers with Weighted
+          Graph-Walking Automata"
+        </Href>{" "}
+        (<b>Patrick Soga</b> and David Chiang), has been accepted to
+        Transactions on Machine Learning Research (TMLR). */}
+        One <Href href="https://arxiv.org/pdf/2212.06898.pdf">paper</Href> on
+        using graph automata to compute positional encodings for graph
+        transformers has been accepted to Transactions on Machine Learning
+        Research (TMLR). My first first-author paper!
+        {/* (๑•̀ㅂ•́)و✧ */}
       </>
     ),
   },
@@ -27,12 +27,18 @@ const NewsEntries = [
     date: "Jan 2023",
     text: (
       <>
-        Our paper,{" "}
-        <Href href="https://openreview.net/forum?id=hZftxQGJ4Re">
+        {/* Our paper,{" "}
+        <Href href="https://arxiv.org/pdf/2205.13988.pdf">
           "Deep Ensembles for Graphs with Higher-order Dependencies"
         </Href>{" "}
         (Steven Krieg, William Burgis, <b>Patrick Soga</b>, and Nitesh Chawla),
-        has been accepted ICLR 2023.
+        has been accepted ICLR 2023. */}
+        One <Href href="https://arxiv.org/pdf/2205.13988.pdf">paper</Href> on
+        using deep ensembles for{" "}
+        <Href href="https://www.science.org/doi/10.1126/sciadv.1600028">
+          higher-order networks
+        </Href>{" "}
+        has been accepted to ICLR 2023.
       </>
     ),
   },
@@ -40,18 +46,13 @@ const NewsEntries = [
     date: "Jan 2023",
     text: (
       <>
-        Graduated Cum Laude from Notre Dame with degrees in Computer Science and
-        Philosophy.
-      </>
-    ),
-  },
-  {
-    date: "Dec 2022",
-    text: (
-      <>
-        New <Href href="https://arxiv.org/abs/2212.06898">preprint</Href> on
-        using graph-walking automata for graph positional encodings available on
-        arXiv.
+        Graduated Cum Laude from{" "}
+        <Href href="https://www.nd.edu/">Notre Dame</Href> with degrees in{" "}
+        <Href href="https://cse.nd.edu/">computer science</Href> and{" "}
+        <Href href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/major-concentration/">
+          philosophy
+        </Href>
+        .
       </>
     ),
   },
@@ -62,9 +63,12 @@ const News = () => (
     <h2>News</h2>
     <ul>
       {NewsEntries.slice(0, 8).map((newsEntry, idx) => (
-        <li key={idx}>
-          [{newsEntry.date}] <em>{newsEntry.text}</em>
-        </li>
+        <>
+          <div className="newsDate">{newsEntry.date}</div>
+          <div className="newsText">
+            <em>{newsEntry.text}</em>
+          </div>
+        </>
       ))}
     </ul>
   </section>

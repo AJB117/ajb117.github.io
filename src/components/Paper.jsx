@@ -1,6 +1,6 @@
 import React from "react"
-import { ConferenceToAbbrev } from "../util/PapersUtil"
 import Href from "./Href"
+import { VenueToAbbrev } from "../util/PapersUtil"
 
 const Authors = ({ authors }) => {
   const needsOxfordComma = authors.length > 2
@@ -11,7 +11,7 @@ const Authors = ({ authors }) => {
       {authors.map((author, idx) => (
         <span key={idx}>
           {isLastAuthor(idx) ? " and " : " "}
-          {author.includes("Patrick Soga") ? <b>{author}</b> : author}
+          {author.includes("Soga") ? <b>{author}</b> : author}
           {isLastAuthor(idx) || !needsOxfordComma ? "" : ", "}
         </span>
       ))}
@@ -28,10 +28,13 @@ const Paper = ({ authors, booktitle, title, year, url }) => (
       <Authors authors={authors} />
     </section>
     <section>
-      {booktitle in ConferenceToAbbrev
-        ? ConferenceToAbbrev[booktitle]
-        : booktitle}{" "}
-      {year}.
+      {booktitle in VenueToAbbrev ? VenueToAbbrev[booktitle] : booktitle} {year}
+      .{" "}
+      {title ===
+        "Bridging Graph Position Encodings for Transformers with Weighted Graph-Walking Automata" ||
+      title === "Deep Ensembles for Graphs with Higher-Order Dependencies" ? (
+        <>To appear.</>
+      ) : null}
     </section>
   </section>
 )

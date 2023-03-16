@@ -36,6 +36,19 @@
   padding-left: 0;
 }
 
+.news > ul li {
+  margin-bottom: 6px;
+}
+
+.newsDate {
+  float: left;
+}
+
+.newsText {
+  margin-left: 90px;
+  min-height: 20px;
+}
+
 .paper {
   margin-bottom: 15px;
 }
