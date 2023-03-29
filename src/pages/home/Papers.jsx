@@ -42,7 +42,7 @@ const Paper = ({ authors, booktitle, title, year, url }) => {
 const Papers = () => {
   const papers = YAMLData.papers.split(/(?=@)/).map((paperString, idx) => {
     let { authors, booktitle, title, year, url } = parseString(paperString)
-    const venue = Venues.filter(venue => venue.name === booktitle)[0]
+    const venue = Venues.find(venue => venue.name === booktitle)
 
     return {
       authors: formatAuthors(authors),
