@@ -52,7 +52,7 @@ export const Conferences = new Set([
   "International World Wide Web Conference",
 ])
 
-export class Venue {
+class Venue {
   constructor(name) {
     this.name = name
     this.abbrev = VenueToAbbrev[name]
@@ -66,6 +66,37 @@ export class Venue {
     return Journals.has(this.name)
   }
 }
+
+export const Venues = [
+  new Venue("arXiv"),
+  new Venue("coRR"),
+  new Venue("International Conference on Machine Learning"),
+  new Venue("International Conference on Learning Representations"),
+  new Venue("Conference on Neural Information Processing Systems"),
+  new Venue("International Conference on Computer Vision"),
+  new Venue("Conference on Computer Vision and Pattern Recognition"),
+  new Venue("European Conference on Computer Vision"),
+  new Venue("Association for the Advancement of Artificial Intelligence"),
+  new Venue("International Joint Conference on Artificial Intelligence"),
+  new Venue("Annual Meeting of the Association for Computational Linguistics"),
+  new Venue("Conference on Empirical Methods in Natural Language Processing"),
+  new Venue(
+    "North American Chapter of the Association for Computational Linguistics"
+  ),
+  new Venue(
+    "International Conference on Acoustics, Speech, and Signal Processing"
+  ),
+
+  new Venue("International Conference on Image Processing"),
+  new Venue("International Conference on Data Mining"),
+  new Venue("Knowledge Discovery and Data Mining"),
+  new Venue(
+    "International ACM SIGIR Conference on Research and Development in Information Retrieval"
+  ),
+  new Venue("International World Wide Web Conference"),
+  new Venue("Transactions on Pattern Analysis and Machine Intelligence"),
+  new Venue("Transactions on Machine Learning Research"),
+]
 
 const convertLFToFL = name => {
   if (name.includes(",")) {

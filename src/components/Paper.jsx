@@ -1,6 +1,6 @@
 import React from "react"
 import Href from "./Href"
-import { VenueToAbbrev } from "../util/PapersUtil"
+import { VenueToAbbrev, Venues } from "../util/PapersUtil"
 
 const Authors = ({ authors }) => {
   const needsOxfordComma = authors.length > 2
@@ -28,8 +28,13 @@ const Paper = ({ authors, booktitle, title, year, url }) => (
       <Authors authors={authors} />
     </section>
     <section>
-      {booktitle in VenueToAbbrev ? VenueToAbbrev[booktitle] : booktitle} {year}
-      .{" "}
+      {booktitle in VenueToAbbrev ? VenueToAbbrev[booktitle] : booktitle}
+      {Venues.filter(venue => venue.isJournal())
+        .map(venue => venue.name)
+        .includes(booktitle)
+        ? ", "
+        : " "}
+      {year}.{" "}
       {title ===
         "Bridging Graph Position Encodings for Transformers with Weighted Graph-Walking Automata" ||
       title === "Deep Ensembles for Graphs with Higher-Order Dependencies" ? (
