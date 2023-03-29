@@ -11,7 +11,7 @@ const Links = () => (
     </Helmet>
     <section className="links">
       <div>
-        <a href="cv.pdf" embed target="_blank">
+        <a href="cv.pdf" embed="true" target="_blank">
           cv &#8226;{" "}
         </a>
         <Href href="https://www.linkedin.com/in/patrick-soga-5b4118166/">

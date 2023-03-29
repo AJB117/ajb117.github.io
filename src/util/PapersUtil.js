@@ -1,32 +1,5 @@
 import { toJSON } from "@orcid/bibtex-parse-js"
 
-export const VenueToAbbrev = Object.freeze({
-  arXiv: "Preprint",
-  coRR: "Preprint",
-  "International Conference on Machine Learning": "ICML",
-  "International Conference on Learning Representations": "ICLR",
-  "Conference on Neural Information Processing Systems": "NeurIPS",
-  "International Conference on Computer Vision": "ICCV",
-  "Conference on Computer Vision and Pattern Recognition": "CVPR",
-  "European Conference on Computer Vision": "ECCV",
-  "Association for the Advancement of Artificial Intelligence": "AAAI",
-  "International Joint Conference on Artificial Intelligence": "IJCAI",
-  "Annual Meeting of the Association for Computational Linguistics": "ACL",
-  "Conference on Empirical Methods in Natural Language Processing": "EMNLP",
-  "North American Chapter of the Association for Computational Linguistics":
-    "NAACL",
-  "International Conference on Acoustics, Speech, and Signal Processing":
-    "ICASSP",
-  "International Conference on Image Processing": "ICIP",
-  "International Conference on Data Mining": "ICDM",
-  "Knowledge Discovery and Data Mining": "KDD",
-  "International ACM SIGIR Conference on Research and Development in Information Retrieval":
-    "SIGIR",
-  "International World Wide Web Conference": "WWW",
-  "Transactions on Pattern Analysis and Machine Intelligence": "TPAMI",
-  "Transactions on Machine Learning Research": "TMLR",
-})
-
 export const Journals = new Set([
   "IEEE Transactions on Pattern Analysis and Machine Intelligence",
   "Transactions on Machine Learning Research",
@@ -53,9 +26,9 @@ export const Conferences = new Set([
 ])
 
 class Venue {
-  constructor(name) {
+  constructor(name, abbrev) {
     this.name = name
-    this.abbrev = VenueToAbbrev[name]
+    this.abbrev = abbrev
   }
 
   isConference() {
@@ -68,34 +41,52 @@ class Venue {
 }
 
 export const Venues = [
-  new Venue("arXiv"),
-  new Venue("coRR"),
-  new Venue("International Conference on Machine Learning"),
-  new Venue("International Conference on Learning Representations"),
-  new Venue("Conference on Neural Information Processing Systems"),
-  new Venue("International Conference on Computer Vision"),
-  new Venue("Conference on Computer Vision and Pattern Recognition"),
-  new Venue("European Conference on Computer Vision"),
-  new Venue("Association for the Advancement of Artificial Intelligence"),
-  new Venue("International Joint Conference on Artificial Intelligence"),
-  new Venue("Annual Meeting of the Association for Computational Linguistics"),
-  new Venue("Conference on Empirical Methods in Natural Language Processing"),
+  new Venue("arXiv", "Preprint"),
+  new Venue("coRR", "Preprint"),
+  new Venue("International Conference on Machine Learning", "ICML"),
+  new Venue("International Conference on Learning Representations", "ICLR"),
+  new Venue("Conference on Neural Information Processing Systems", "NeurIPS"),
+  new Venue("International Conference on Computer Vision", "ICCV"),
+  new Venue("Conference on Computer Vision and Pattern Recognition", "CVPR"),
+  new Venue("European Conference on Computer Vision", "ECCV"),
   new Venue(
-    "North American Chapter of the Association for Computational Linguistics"
+    "Association for the Advancement of Artificial Intelligence",
+    "AAAI"
   ),
   new Venue(
-    "International Conference on Acoustics, Speech, and Signal Processing"
+    "International Joint Conference on Artificial Intelligence",
+    "IJCAI"
+  ),
+  new Venue(
+    "Annual Meeting of the Association for Computational Linguistics",
+    "ACL"
+  ),
+  new Venue(
+    "Conference on Empirical Methods in Natural Language Processing",
+    "EMNLP"
+  ),
+  new Venue(
+    "North American Chapter of the Association for Computational Linguistics",
+    "NAACL"
+  ),
+  new Venue(
+    "International Conference on Acoustics, Speech, and Signal Processing",
+    "ICASSP"
   ),
 
-  new Venue("International Conference on Image Processing"),
-  new Venue("International Conference on Data Mining"),
-  new Venue("Knowledge Discovery and Data Mining"),
+  new Venue("International Conference on Image Processing", "ICIP"),
+  new Venue("International Conference on Data Mining", "ICDM"),
+  new Venue("Knowledge Discovery and Data Mining", "KDD"),
   new Venue(
-    "International ACM SIGIR Conference on Research and Development in Information Retrieval"
+    "International ACM SIGIR Conference on Research and Development in Information Retrieval",
+    "SIGIR"
   ),
-  new Venue("International World Wide Web Conference"),
-  new Venue("Transactions on Pattern Analysis and Machine Intelligence"),
-  new Venue("Transactions on Machine Learning Research"),
+  new Venue("International World Wide Web Conference", "WWW"),
+  new Venue(
+    "Transactions on Pattern Analysis and Machine Intelligence",
+    "TPAMI"
+  ),
+  new Venue("Transactions on Machine Learning Research", "TMLR"),
 ]
 
 const convertLFToFL = name => {
