@@ -12,6 +12,10 @@
   display: inline-block;
 }
 
+h2 {
+  font-weight: 500;
+}
+
 .nameText {
   /* visibility: hidden; */
   /* width: 120px;
@@ -50,4 +54,21 @@ footer {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
   margin-bottom: 10px;
+}
+
+.paperLink {
+  position: relative;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 4px;
+  padding: 1px 3px 0px 3px;
+  border: solid 1px #2980b9;
+  color: #2980b9;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0px 4px;
+}
+
+.normalLink {
+  color: #2980b9;
 }

@@ -113,8 +113,21 @@ const parsePaperJSON = ({ author, booktitle, title, year, url }) => {
   }
 }
 
+const parseStringForCode = string => {
+  const byNewLine = string
+    .split("\n")
+    .find(line => line.includes("note"))
+    .trim()
+  const codeUrl = byNewLine.match(/\{([^)]+)\}/)[1]
+  return codeUrl
+}
+
 export const parseString = string => {
   const paperJSON = toJSON(string)[0].entryTags
-  const paperContent = parsePaperJSON(paperJSON)
+
+  const codeUrl = parseStringForCode(string)
+
+  const paperContent = { ...parsePaperJSON(paperJSON), codeUrl: codeUrl }
+
   return paperContent
 }

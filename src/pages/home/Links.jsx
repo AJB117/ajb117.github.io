@@ -11,20 +11,26 @@ const Links = () => (
     </Helmet>
     <section className="links">
       <div>
-        <a href="cv.pdf" embed="true" target="_blank">
+        <a href="cv.pdf" embed="true" target="_blank" className="normalLink">
           cv &#8226;{" "}
         </a>
-        <Href href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
+        <Href
+          href="https://www.linkedin.com/in/patrick-soga-5b4118166/"
+          className="normalLink"
+        >
           linkedin &#8226;
         </Href>
-        <Href href="https://github.com/AJB117">
+        <Href href="https://github.com/AJB117" className="normalLink">
           {" "}
           github (personal) &#8226;{" "}
         </Href>
-        <Href href="https://github.com/patricksoga"> github (school)</Href>
+        <Href href="https://github.com/patricksoga" className="normalLink">
+          {" "}
+          github (school)
+        </Href>
       </div>
       <div>
-        <Href href="https://nlp.nd.edu/">
+        <Href href="https://nlp.nd.edu/" className="normalLink">
           ND Natural Language Processing Group
         </Href>
       </div>

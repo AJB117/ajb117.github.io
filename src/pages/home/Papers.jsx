@@ -19,21 +19,24 @@ const addCommaIfJournal = venue => {
   return venue.isJournal() ? venue.abbrev + ", " : venue.abbrev
 }
 
-const Paper = ({ authors, booktitle, title, year, url }) => {
+const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
   return (
     <section className="paper">
-      <strong>
-        <Href href={url}>{title}</Href>
-      </strong>
+      {title}
       <section>{authors}</section>
       <section>
         {booktitle} {year}
         {". "}
         {title ===
-          "Bridging Graph Position Encodings for Transformers with Weighted Graph-Walking Automata" ||
-        title === "Deep Ensembles for Graphs with Higher-Order Dependencies" ? (
+        "Deep Ensembles for Graphs with Higher-Order Dependencies" ? (
           <>To appear.</>
         ) : null}
+        <Href className="paperLink" href={codeUrl}>
+          Code
+        </Href>
+        <Href className="paperLink" href={url}>
+          arXiv
+        </Href>
       </section>
     </section>
   )
@@ -41,7 +44,9 @@ const Paper = ({ authors, booktitle, title, year, url }) => {
 
 const Papers = () => {
   const papers = YAMLData.papers.split(/(?=@)/).map((paperString, idx) => {
-    let { authors, booktitle, title, year, url } = parseString(paperString)
+    let { authors, booktitle, title, year, url, codeUrl } = parseString(
+      paperString
+    )
     const venue = Venues.find(venue => venue.name === booktitle)
 
     return {
@@ -50,6 +55,7 @@ const Papers = () => {
       title,
       year,
       url,
+      codeUrl,
     }
   })
 
