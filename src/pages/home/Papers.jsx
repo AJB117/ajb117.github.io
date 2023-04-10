@@ -3,6 +3,35 @@ import YAMLData from "../../../content/content.yml"
 import Href from "../../components/Href"
 import { Venues, parseString } from "../../util/PapersUtil"
 
+const parseBibTeX = bibtex => {
+  let entries = []
+  let currentEntry = null
+
+  const lines = bibtex.trim().split(/\r?\n/)
+  console.log(lines)
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim().replace(",", "")
+
+    if (line.startsWith("@")) {
+      // New entry
+      const type = line.split("{")[0].substring(1)
+      const key = line.split("{")[1].split("}")[0]
+      currentEntry = { type, key }
+      entries.push(currentEntry)
+    } else if (line.startsWith("}")) {
+      // End of entry
+      currentEntry = null
+    } else if (currentEntry) {
+      // Field
+      const [name, value] = line.split("=").map(s => s.trim())
+      currentEntry[name] = value.replace(/^{/, "").replace(/}$/, "")
+    }
+  }
+
+  return entries
+}
+
 const formatAuthors = authors => {
   const needsOxfordComma = authors.length > 2
   const isLastAuthor = idx => idx === authors.length - 1
