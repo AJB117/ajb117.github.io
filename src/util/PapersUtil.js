@@ -1,5 +1,3 @@
-import { toJSON } from "@orcid/bibtex-parse-js"
-
 export const Journals = new Set([
   "IEEE Transactions on Pattern Analysis and Machine Intelligence",
   "Transactions on Machine Learning Research",
@@ -97,7 +95,38 @@ const convertLFToFL = name => {
   return name
 }
 
-const parsePaperJSON = ({ author, booktitle, title, year, url }) => {
+export const parseBibTeX = bibtex => {
+  const entries = []
+  let currentEntry = null
+
+  bibtex.split(/\r?\n/).forEach(line => {
+    if (line.startsWith("@")) {
+      const type = line.split("{")[0].substring(1)
+      const key = line.split("{")[1].split("}")[0]
+      currentEntry = { type, key }
+      entries.push(currentEntry)
+    } else if (line.startsWith("}")) {
+      currentEntry = null
+    } else if (currentEntry) {
+      const [name, value] = line.split("=").map(s => s.trim())
+      currentEntry[name] = value
+        .replace(/^{/, "")
+        .replace(/,$/, "")
+        .replace(/}$/, "")
+    }
+  })
+
+  return entries
+}
+
+export const preprocessPapers = ({
+  author,
+  booktitle,
+  title,
+  year,
+  url,
+  codeUrl,
+}) => {
   if (booktitle === undefined) {
     booktitle = "Preprint"
   }
@@ -110,24 +139,6 @@ const parsePaperJSON = ({ author, booktitle, title, year, url }) => {
     title,
     year,
     url,
+    codeUrl,
   }
-}
-
-const parseStringForCode = string => {
-  const byNewLine = string
-    .split("\n")
-    .find(line => line.includes("note"))
-    .trim()
-  const codeUrl = byNewLine.match(/\{([^)]+)\}/)[1]
-  return codeUrl
-}
-
-export const parseString = string => {
-  const paperJSON = toJSON(string)[0].entryTags
-
-  const codeUrl = parseStringForCode(string)
-
-  const paperContent = { ...parsePaperJSON(paperJSON), codeUrl: codeUrl }
-
-  return paperContent
 }

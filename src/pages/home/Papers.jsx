@@ -1,36 +1,7 @@
 import React from "react"
 import YAMLData from "../../../content/content.yml"
 import Href from "../../components/Href"
-import { Venues, parseString } from "../../util/PapersUtil"
-
-const parseBibTeX = bibtex => {
-  let entries = []
-  let currentEntry = null
-
-  const lines = bibtex.trim().split(/\r?\n/)
-  console.log(lines)
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim().replace(",", "")
-
-    if (line.startsWith("@")) {
-      // New entry
-      const type = line.split("{")[0].substring(1)
-      const key = line.split("{")[1].split("}")[0]
-      currentEntry = { type, key }
-      entries.push(currentEntry)
-    } else if (line.startsWith("}")) {
-      // End of entry
-      currentEntry = null
-    } else if (currentEntry) {
-      // Field
-      const [name, value] = line.split("=").map(s => s.trim())
-      currentEntry[name] = value.replace(/^{/, "").replace(/}$/, "")
-    }
-  }
-
-  return entries
-}
+import { Venues, parseBibTeX, preprocessPapers } from "../../util/PapersUtil"
 
 const formatAuthors = authors => {
   const needsOxfordComma = authors.length > 2
@@ -56,10 +27,6 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
       <section>
         {booktitle} {year}
         {". "}
-        {title ===
-        "Deep Ensembles for Graphs with Higher-Order Dependencies" ? (
-          <>To appear.</>
-        ) : null}
         <Href className="paperLink" href={codeUrl}>
           Code
         </Href>
@@ -72,21 +39,15 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
 }
 
 const Papers = () => {
-  const papers = YAMLData.papers.split(/(?=@)/).map((paperString, idx) => {
-    let { authors, booktitle, title, year, url, codeUrl } = parseString(
-      paperString
-    )
-    const venue = Venues.find(venue => venue.name === booktitle)
-
-    return {
-      authors: formatAuthors(authors),
-      booktitle: addCommaIfJournal(venue),
-      title,
-      year,
-      url,
-      codeUrl,
-    }
-  })
+  let papers = parseBibTeX(YAMLData.papers)
+    .map(preprocessPapers)
+    .map(paper => ({
+      ...paper,
+      authors: formatAuthors(paper.authors),
+      booktitle: addCommaIfJournal(
+        Venues.find(venue => venue.name === paper.booktitle)
+      ),
+    }))
 
   return (
     <section className="papers">
