@@ -36,12 +36,16 @@ h2 {
 
 @media (max-width: 600px) or (max-height: 600px) {
   .page {
-    margin-top: 65px;
+    margin-top: 70px;
   }
   footer {
     display: none;
   }
+  .papers {
+    margin-top: -30px;
+  }
 }
+
 
 footer {
   position: fixed;
