@@ -1,7 +1,6 @@
 import React from "react"
 import Interests from "./Interests"
 import Description from "./Description"
-import Links from "./Links"
 import Papers from "./Papers"
 import News from "./News"
 import { Helmet } from "react-helmet"
@@ -28,11 +27,10 @@ const Home = () => (
       />
       <section>
         <Description />
-        <Links />
         <Interests />
       </section>
     </section>
-    {/* <News /> */}
+    <News />
     <Papers />
   </section>
 )

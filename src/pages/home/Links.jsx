@@ -22,16 +22,7 @@ const Links = () => (
         </Href>
         <Href href="https://github.com/AJB117" className="normalLink">
           {" "}
-          github (personal) &#8226;{" "}
-        </Href>
-        <Href href="https://github.com/patricksoga" className="normalLink">
-          {" "}
-          github (school)
-        </Href>
-      </div>
-      <div>
-        <Href href="https://nlp.nd.edu/" className="normalLink">
-          ND Natural Language Processing Group
+          github
         </Href>
       </div>
     </section>

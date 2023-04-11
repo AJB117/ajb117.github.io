@@ -36,10 +36,13 @@ h2 {
 
 @media (max-width: 600px) or (max-height: 600px) {
   .page {
-    margin-top: 65px;
+    margin-top: 70px;
   }
   footer {
     display: none;
+  }
+  .news {
+    margin-top: -15px
   }
 }
 
@@ -71,4 +74,8 @@ footer {
 
 .normalLink {
   color: #2980b9;
+}
+
+.linkWrapper {
+  margin-left: 6px;
 }

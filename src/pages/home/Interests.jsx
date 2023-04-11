@@ -6,26 +6,30 @@ import Href from "../../components/Href"
 const Interests = () => (
   <section className="interests">
     <p>
-      My interests are in graph ML and its applications. I am currently applying
-      to AI/ML PhD programs.
+      I am an incoming CS PhD student to the{" "}
+      <Href href="http://www.virginia.edu/" className="normalLink">
+        University of Virginia{" "}
+      </Href>{" "}
+      to be advised by{" "}
+      <Href href="http://www.ece.virginia.edu/~jl6qk/" className="normalLink">
+        Prof. Jundong Li
+      </Href>
+      . My research interests are broadly in machine learning on graphs and its
+      applications.
     </p>
     <p>
-      I recently graduated from the{" "}
+      Earlier, I did my undergrad at the{" "}
       <Href href="https://nd.edu" className="normalLink">
         University of Notre Dame{" "}
       </Href>
-      with degrees in{" "}
-      <Href href="https://cse.nd.edu/" className="normalLink">
-        CS
+      with degrees in CS and philosophy where I was graciously advised by{" "}
+      <Href href="https://www3.nd.edu/~dchiang/" className="normalLink">
+        Prof. David Chiang{" "}
       </Href>{" "}
       and{" "}
-      <Href
-        href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/major-concentration/"
-        className="normalLink"
-      >
-        philosophy
+      <Href href="https://niteshchawla.nd.edu/" className="normalLink">
+        Prof. Nitesh Chawla.
       </Href>
-      .
     </p>
   </section>
 )

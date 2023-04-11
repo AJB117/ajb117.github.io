@@ -5,21 +5,41 @@ import "../../styles/global.css"
 
 const NewsEntries = [
   {
+    date: "Apr 2023",
+    text: (
+      <>
+        I decided to join the{" "}
+        <Href href="http://www.virginia.edu/" className="normalLink">
+          University of Virginia{" "}
+        </Href>{" "}
+        as a PhD student advised by{" "}
+        <Href href="http://www.ece.virginia.edu/~jl6qk/" className="normalLink">
+          Prof. Jundong Li
+        </Href>
+        .
+      </>
+    ),
+  },
+  {
     date: "Mar 2023",
     text: (
       <>
-        {/* Our paper,{" "}
-        <Href href="https://arxiv.org/pdf/2212.06898.pdf">
-          "Bridging Graph Position Encodings for Transformers with Weighted
-          Graph-Walking Automata"
+        {/* One{" "}
+        <Href
+          href="https://arxiv.org/pdf/2212.06898.pdf"
+          className="normalLink"
+        >
+          paper
         </Href>{" "}
-        (<b>Patrick Soga</b> and David Chiang), has been accepted to
-        Transactions on Machine Learning Research (TMLR). */}
-        One <Href href="https://arxiv.org/pdf/2212.06898.pdf">paper</Href> on
-        using graph automata to compute positional encodings for graph
+        on using graph automata to compute positional encodings for graph
         transformers has been accepted to Transactions on Machine Learning
-        Research (TMLR). My first first-author paper!
-        {/* (๑•̀ㅂ•́)و✧ */}
+        Research (TMLR). */}
+        My first first-author{" "}
+        <Href href="https://arxiv.org/abs/2212.06898" className="normalLink">
+          paper
+        </Href>{" "}
+        has been accepted to Transactions on Machine Learning Research (TMLR)!
+        (๑•̀ㅂ•́)و✧
       </>
     ),
   },
@@ -33,9 +53,15 @@ const NewsEntries = [
         </Href>{" "}
         (Steven Krieg, William Burgis, <b>Patrick Soga</b>, and Nitesh Chawla),
         has been accepted ICLR 2023. */}
-        One <Href href="https://arxiv.org/pdf/2205.13988.pdf">paper</Href> on
-        using deep ensembles for{" "}
-        <Href href="https://www.science.org/doi/10.1126/sciadv.1600028">
+        A{" "}
+        <Href href="https://arxiv.org/abs/2205.13988" className="normalLink">
+          paper
+        </Href>{" "}
+        on using deep ensembles for{" "}
+        <Href
+          href="https://www.science.org/doi/10.1126/sciadv.1600028"
+          className="normalLink"
+        >
           higher-order networks
         </Href>{" "}
         has been accepted to ICLR 2023.
@@ -47,9 +73,18 @@ const NewsEntries = [
     text: (
       <>
         Graduated Cum Laude from{" "}
-        <Href href="https://www.nd.edu/">Notre Dame</Href> with degrees in{" "}
-        <Href href="https://cse.nd.edu/">computer science</Href> and{" "}
-        <Href href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/major-concentration/">
+        <Href href="https://www.nd.edu/" className="normalLink">
+          Notre Dame
+        </Href>{" "}
+        with degrees in{" "}
+        <Href href="https://cse.nd.edu/" className="normalLink">
+          computer science
+        </Href>{" "}
+        and{" "}
+        <Href
+          href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/major-concentration/"
+          className="normalLink"
+        >
           philosophy
         </Href>
         .
