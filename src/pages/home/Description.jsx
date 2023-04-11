@@ -35,6 +35,7 @@ const Description = () => {
           <Href
             href="https://www.google.com/maps/place/Charlottesville,+VA/@38.040082,-78.5208818,14z/data=!3m1!4b1!4m6!3m5!1s0x89b3862dea50a48f:0x9086f096c38b74fc!8m2!3d38.0293059!4d-78.4766781!16zL20vMG1wM2w"
             className="normalLink"
+            style={{ marginLeft: "1px" }}
           >
             Charlottesville, VA
           </Href>
