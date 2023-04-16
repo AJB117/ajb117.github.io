@@ -4,7 +4,7 @@
 }
 
 .page {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .name {
@@ -42,15 +42,16 @@ h2 {
     display: none;
   }
   .news {
-    margin-top: -15px
+    margin-top: -15px;
   }
 }
 
 footer {
-  position: fixed;
+  /* position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
+  margin-top: 12em;
   text-align: center;
   font-size: 0.9rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
