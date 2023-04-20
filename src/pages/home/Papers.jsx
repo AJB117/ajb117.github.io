@@ -27,11 +27,11 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
       <section>
         {booktitle} {year}
         {". "}
-        <Href className="paperLink" href={codeUrl}>
-          Code
-        </Href>
         <Href className="paperLink" href={url}>
           arXiv
+        </Href>
+        <Href className="paperLink" href={codeUrl}>
+          Code
         </Href>
       </section>
     </section>
