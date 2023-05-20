@@ -14,20 +14,14 @@ const Links = () => (
         <a href="cv.pdf" embed="true" target="_blank" className="normalLink">
           cv &#8226;{" "}
         </a>
-        <Href
-          href="https://www.linkedin.com/in/patrick-soga-5b4118166/"
-          className="normalLink"
-        >
+        <Href href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
           linkedin &#8226;
         </Href>
-        <Href href="https://github.com/AJB117" className="normalLink">
+        <Href href="https://github.com/AJB117">
           {" "}
           github (personal) &#8226;{" "}
         </Href>
-        <Href href="https://github.com/patricksoga" className="normalLink">
-          {" "}
-          github (school)
-        </Href>
+        <Href href="https://github.com/patricksoga"> github (school)</Href>
       </div>
     </section>
   </>

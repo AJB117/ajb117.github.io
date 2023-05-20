@@ -19,9 +19,7 @@ export default function HomeIndex() {
       </Layout>
       <footer>
         This site was built using{" "}
-        <Href href="https://www.gatsbyjs.com/" className="normalLink">
-          Gatsby.
-        </Href>
+        <Href href="https://www.gatsbyjs.com/">Gatsby.</Href>
         <a
           href="https://clustrmaps.com/site/1bu47"
           title="Visit tracker"
