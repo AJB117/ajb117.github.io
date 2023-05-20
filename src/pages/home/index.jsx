@@ -15,22 +15,22 @@ const Home = () => (
       <meta name="author" content="Patrick Soga, AJB117" />
     </Helmet>
     <section className="home-content page">
-      <StaticImage
-        className="photo"
-        src="../../../static/photo.jpg"
-        alt="me"
-        title="me"
-        height={350}
-        layout="fixed"
-        imgStyle={{ objectFit: "contain" }}
-        placeholder="blurred"
-        style={{ marginBottom: "10px" }}
-      />
       <section>
         <Description />
         <Links />
         <Interests />
       </section>
+      <StaticImage
+        className="photo"
+        src="../../../static/IMG_5084-cropped.jpg"
+        alt="me"
+        title="me"
+        height={320}
+        layout="fixed"
+        imgStyle={{ objectFit: "contain" }}
+        placeholder="blurred"
+        style={{ marginBottom: "10px" }}
+      />
     </section>
     {/* <News /> */}
     <Papers />

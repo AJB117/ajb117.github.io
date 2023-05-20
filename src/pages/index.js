@@ -22,6 +22,16 @@ export default function HomeIndex() {
         <Href href="https://www.gatsbyjs.com/" className="normalLink">
           Gatsby.
         </Href>
+        <a
+          href="https://clustrmaps.com/site/1bu47"
+          title="Visit tracker"
+          style={{ display: "none" }}
+        >
+          <img
+            style={{ display: "none" }}
+            src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=yRhSh5ifVGfOg83kWjRtv4tKucQeFHFiWGuehYwaLeI"
+          />
+        </a>
       </footer>
     </>
   )

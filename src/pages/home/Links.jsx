@@ -29,11 +29,6 @@ const Links = () => (
           github (school)
         </Href>
       </div>
-      <div>
-        <Href href="https://nlp.nd.edu/" className="normalLink">
-          ND Natural Language Processing Group
-        </Href>
-      </div>
     </section>
   </>
 )

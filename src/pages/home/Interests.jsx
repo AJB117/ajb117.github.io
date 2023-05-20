@@ -10,6 +10,10 @@ const Interests = () => (
       <Href href="https://www.virginia.edu/" className="normalLink">
         University of Virginia
       </Href>{" "}
+      to be advised by{" "}
+      <Href href="http://www.ece.virginia.edu/~jl6qk/" className="normalLink">
+        Prof. Jundong Li
+      </Href>
       . My interests are broadly in machine learning on graphs and its
       applications.
     </p>

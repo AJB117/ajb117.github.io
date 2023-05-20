@@ -22,7 +22,7 @@ const addCommaIfJournal = venue => {
 const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
   return (
     <section className="paper">
-      {title}
+      <em>{title}</em>
       <section>{authors}</section>
       <section>
         {booktitle} {year}

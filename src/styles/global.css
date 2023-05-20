@@ -34,7 +34,10 @@ h2 {
   visibility: visible;
 } */
 
-@media (max-width: 600px) or (max-height: 600px) {
+@media (max-width: 601px) or (max-height: 601px) {
+  .home-content {
+    max-width: 90vw;
+  }
   .page {
     margin-top: 70px;
   }
@@ -42,7 +45,12 @@ h2 {
     display: none;
   }
   .papers {
-    margin-top: -30px;
+    margin-top: 30px;
+    max-width: 90vw;
+  }
+  .photo {
+    margin-left: 4vw;
+    margin-top: 0vh;
   }
 }
 
