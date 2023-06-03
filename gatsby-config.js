@@ -21,7 +21,7 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         remarkPlugins: [require(`remark-math`)],
         rehypePlugins: [require(`rehype-katex`)],
-        plugins: [`gatsby-remark-images`],
+        plugins: [`gatsby-remark-images`, `gatsby-plugin-fontawesome-css`],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
