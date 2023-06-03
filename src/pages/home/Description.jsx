@@ -1,7 +1,6 @@
 import React from "react"
 import "../../styles/home.css"
 import "../../styles/global.css"
-import Email from "./Email"
 
 const Description = () => {
   const [showName, setShowName] = React.useState(false)
@@ -28,9 +27,6 @@ const Description = () => {
       >
         Patrick Soga
       </h2>
-      <p>
-        <Email />
-      </p>
     </section>
   )
 }

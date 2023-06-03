@@ -1,6 +1,9 @@
 import React from "react"
 import Href from "../../components/Href"
 import { Helmet } from "react-helmet"
+import { faFilePdf, faEnvelope } from "@fortawesome/free-regular-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 import "../../styles/home.css"
 import "../../styles/global.css"
 
@@ -11,17 +14,33 @@ const Links = () => (
     </Helmet>
     <section className="links">
       <div>
-        <a href="cv.pdf" embed="true" target="_blank" className="normalLink">
-          cv &#8226;{" "}
-        </a>
-        <Href href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
-          linkedin &#8226;
-        </Href>
-        <Href href="https://github.com/AJB117">
-          {" "}
-          github (personal) &#8226;{" "}
-        </Href>
-        <Href href="https://github.com/patricksoga"> github (school)</Href>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+          <li>
+            <a href="mailto:psoga343@gmail.com" className="normalLink">
+              <FontAwesomeIcon icon={faEnvelope} /> psoga343@gmail.com
+            </a>
+          </li>
+          <li>
+            <a
+              href="cv.pdf"
+              embed="true"
+              target="_blank"
+              className="normalLink"
+            >
+              <FontAwesomeIcon icon={faFilePdf} /> cv
+            </a>
+          </li>
+          <li>
+            <Href href="https://www.linkedin.com/in/patrick-soga-5b4118166/">
+              <FontAwesomeIcon icon={faLinkedin} /> linkedin
+            </Href>
+          </li>
+          <li>
+            <Href href="https://github.com/AJB117">
+              <FontAwesomeIcon icon={faGithub} /> github
+            </Href>
+          </li>
+        </ul>
       </div>
     </section>
   </>
