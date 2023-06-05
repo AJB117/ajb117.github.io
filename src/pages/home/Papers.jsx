@@ -15,10 +15,6 @@ const formatAuthors = authors => {
   ))
 }
 
-const addCommaIfJournal = venue => {
-  return venue.isJournal() ? venue.abbrev + ", " : venue.abbrev
-}
-
 const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
   return (
     <section className="paper">
@@ -44,14 +40,13 @@ const Papers = () => {
     .map(paper => ({
       ...paper,
       authors: formatAuthors(paper.authors),
-      booktitle: addCommaIfJournal(
-        Venues.find(venue => venue.name === paper.booktitle)
-      ),
+      booktitle:
+        Venues.find(venue => venue.name === paper.booktitle).abbrev + ", ",
     }))
 
   return (
     <section className="papers">
-      <h2>Papers</h2>
+      <h2>Publications</h2>
       {papers.map((paper, idx) => (
         <Paper key={idx} {...paper} />
       ))}
