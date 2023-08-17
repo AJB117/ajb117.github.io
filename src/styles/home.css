@@ -1,13 +1,12 @@
-.home-content {
-  margin: 0 auto;
-  max-width: 700px;
-  justify-items: center;
+.home {
   display: flex;
+  place-content: center;
+  vertical-align: top;
+  margin-top: 80px;
 }
 
-.photo {
-  margin-left: 1vw;
-  margin-top: 2vh;
+.home-content {
+  margin-left: 40px;
 }
 
 .description,
@@ -23,13 +22,33 @@
 }
 
 .links {
-  margin: 0 auto;
   margin-top: 20px;
 }
 
-.papers, .news {
-  margin: 0 auto;
-  max-width: 700px;
+.photo-side {
+  margin-top: 30px;
+}
+
+@media (max-width: 650px) and (max-height: 1024px) {
+  .home {
+    display: block;
+    padding: 10px;
+  }
+  .home-content {
+    margin-left: 0;
+  }
+  .photo-side {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .links {
+    margin-top: 10px;
+  }
+}
+
+.papers,
+.news {
+  margin-top: 50px;
 }
 
 .news {

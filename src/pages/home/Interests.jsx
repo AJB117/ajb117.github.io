@@ -6,12 +6,13 @@ import Href from "../../components/Href"
 const Interests = () => (
   <section className="interests">
     <p>
-      I'm an incoming CS PhD student to the{" "}
-      <Href href="https://www.virginia.edu/">University of Virginia</Href> to be
-      advised by{" "}
-      <Href href="http://www.ece.virginia.edu/~jl6qk/">Prof. Jundong Li</Href>.
-      My interests are broadly in machine learning on graphs and its
-      applications.
+      I'm a first-year PhD student at the University of Virginia's{" "}
+      <Href href="https://engineering.virginia.edu/departments/computer-science/">
+        CS department
+      </Href>{" "}
+      currently advised by{" "}
+      <Href href="https://jundongli.github.io">Prof. Jundong Li</Href>. My
+      interests are broadly in machine learning on graphs and its applications.
     </p>
     <p>
       I did my undergrad at the{" "}
@@ -20,9 +21,9 @@ const Interests = () => (
         CS
       </Href> and{" "}
       <Href href="https://philosophy.nd.edu/majors-minors/philosophy-science-and-mathematics/major-concentration/">
-        philosophy
+        philosophy of math/logic
       </Href>{" "}
-      and worked under Professors{" "}
+      and worked under professors{" "}
       <Href href="https://niteshchawla.nd.edu/">Nitesh Chawla</Href> and{" "}
       <Href href="https://www3.nd.edu/~dchiang/">David Chiang</Href>.
     </p>

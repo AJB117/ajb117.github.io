@@ -1,10 +1,14 @@
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0.5em 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "merriweather-regular";
   src: url("../../fonts/Merriweather-Light.ttf");
-}
-
-.page {
-  margin-top: 90px;
 }
 
 .name {
@@ -17,54 +21,22 @@ h2 {
 }
 
 .nameText {
-  /* visibility: hidden; */
-  /* width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  position: absolute;
-  z-index: 1; */
   font-size: small;
 }
 
-/* .name:hover + .nameText {
-  visibility: visible;
-} */
-
-@media (max-width: 601px) or (max-height: 601px) {
-  .home-content {
-    max-width: 90vw;
-  }
-  .page {
-    margin-top: 70px;
-  }
+@media (max-width: 650px) and (max-height: 1024px) {
   footer {
     display: none;
   }
-  .papers {
-    margin-top: 30px;
-    max-width: 90vw;
-  }
-  .photo {
-    margin-left: 4vw;
-    margin-top: 0vh;
-  }
 }
 
-
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   text-align: center;
   font-size: 0.9rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin-bottom: 10px;
+  margin-top: 20vh;
 }
 
 .paperLink {

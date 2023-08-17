@@ -16,12 +16,12 @@ const HideOnScroll = ({ children, inBlogPost }) => {
 
 const TopBar = ({ inBlogPost }) => {
   const AppBarStyle = {
-    background: "#F5F5F5",
+    background: "#FFFFFF",
     maxHeight: "50px",
   }
   return (
     <HideOnScroll inBlogPost={inBlogPost}>
-      <AppBar style={AppBarStyle}>
+      <AppBar style={AppBarStyle} elevation={0}>
         <Toolbar variant="dense">
           <div className="text">
             <Link to="/">Home</Link>
@@ -32,6 +32,7 @@ const TopBar = ({ inBlogPost }) => {
             </h2> */}
           </div>
         </Toolbar>
+        <hr />
       </AppBar>
     </HideOnScroll>
   )
