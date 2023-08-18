@@ -13,8 +13,6 @@ const Interests = () => (
       currently advised by{" "}
       <Href href="https://jundongli.github.io">Prof. Jundong Li</Href>. My
       interests are broadly in machine learning on graphs and its applications.
-    </p>
-    <p>
       I did my undergrad at the{" "}
       <Href href="https://nd.edu">University of Notre Dame </Href>
       where I received degrees in <Href href="https://cse.nd.edu/">

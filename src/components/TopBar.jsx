@@ -21,7 +21,7 @@ const TopBar = ({ inBlogPost }) => {
   }
   return (
     <HideOnScroll inBlogPost={inBlogPost}>
-      <AppBar style={AppBarStyle} elevation={0}>
+      <AppBar style={AppBarStyle}>
         <Toolbar variant="dense">
           <div className="text">
             <Link to="/">Home</Link>
@@ -32,7 +32,6 @@ const TopBar = ({ inBlogPost }) => {
             </h2> */}
           </div>
         </Toolbar>
-        <hr />
       </AppBar>
     </HideOnScroll>
   )

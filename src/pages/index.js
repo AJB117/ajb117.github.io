@@ -14,7 +14,7 @@ export default function HomeIndex() {
         <meta name="author" content="Patrick Soga, AJB117" />
         <title>Patrick Soga</title>
       </Helmet>
-      <Layout>
+      <Layout inBlogPost={true}>
         <Home />
       </Layout>
       <footer>
