@@ -19,7 +19,7 @@ const educations = [
     height: 70,
     date: "8.2018 - 12.2022",
     credentialOrPlacement: "B.S. in Computer Science, B.A. in Philosophy",
-    note: "Cum Laude + Phi Beta Kappa",
+    note: "Cum Laude, Phi Beta Kappa",
   },
 ]
 
@@ -68,7 +68,7 @@ const ExpOrEd = ({ name, img, height, date, credentialOrPlacement, note }) => {
       <img src={img} height={height} />
       <div style={{ flexGrow: 1 }}>
         <div className="exp-and-ed-name-date">
-          <h3 style={{ margin: "0 0 5px", lineHeight: 1 }}>{name}</h3>
+          <h3 style={{ margin: "0 0 5px" }}>{name}</h3>
           <div>{date}</div>
         </div>
         <div>

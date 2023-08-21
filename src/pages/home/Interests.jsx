@@ -6,7 +6,8 @@ import Href from "../../components/Href"
 const Interests = () => (
   <section className="interests">
     <p>
-      I'm a first-year PhD student at the University of Virginia's{" "}
+      I'm a first-year PhD student at the{" "}
+      <Href href="https://www.virginia.edu">University of Virginia's</Href>{" "}
       <Href href="https://engineering.virginia.edu/departments/computer-science/">
         CS department
       </Href>{" "}
