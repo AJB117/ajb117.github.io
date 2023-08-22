@@ -15,7 +15,8 @@
 .interests,
 .papers,
 .news,
-.exp-and-ed {
+.exp-and-ed,
+.readings-page {
   font-size: 0.9rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Cantarell, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
@@ -106,5 +107,31 @@ ul {
   .exp-and-ed-name-date {
     display: block;
     width: 100%;
+  }
+}
+
+.reading-paper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.readings {
+  margin-top: 70px;
+  flex-wrap: wrap;
+}
+
+.reading-title-author {
+  width: 700px;
+}
+
+
+@media (max-width: 601px) or (max-height: 601px) {
+  .reading-title-author {
+    width: 250px;
+  }
+  .reading-img {
+    padding-left: 20px;
   }
 }

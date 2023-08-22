@@ -1,0 +1,128 @@
+import React from "react"
+import "../../styles/home.css"
+import "../../styles/global.css"
+import Layout from "../../components/Layout"
+
+const readings = [
+  {
+    author: "Kazuo Ishiguro",
+    title: "Never Let You Go",
+    img:
+      "https://m.media-amazon.com/images/P/1400078776.01._SCLZZZZZZZ_SX500_.jpg",
+    url: "https://en.wikipedia.org/wiki/Never_Let_Me_Go_(novel)",
+  },
+  {
+    author: "Christopher Lasch",
+    title: "The Culture of Narcissism",
+    img:
+      "https://m.media-amazon.com/images/I/51cwvqnAPYL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+    url: "https://en.wikipedia.org/wiki/The_Culture_of_Narcissism",
+  },
+  {
+    author: "Voltaire",
+    title: "Candide",
+    img:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Candide1759.jpg/800px-Candide1759.jpg",
+    url: "https://en.wikipedia.org/wiki/Candide",
+  },
+  {
+    author: "Scott Soames",
+    title: "Philosophical Analysis in the Twentieth Century Vol. 2",
+    img:
+      "https://pup-assets.imgix.net/onix/images/9780691123127.jpg?w=600&auto=format",
+    url:
+      "https://press.princeton.edu/books/paperback/9780691123127/philosophical-analysis-in-the-twentieth-century-volume-2",
+  },
+  {
+    author: "Alexander George & Daniel Velleman",
+    title: "Philosophies of Mathematics",
+    img:
+      "https://m.media-amazon.com/images/P/0631195440.01._SCLZZZZZZZ_SX500_.jpg",
+    url:
+      "https://www.wiley.com/en-us/Philosophies+of+Mathematics-p-9780631195443",
+  },
+  {
+    author: "Herbert Enderton",
+    title: "A Mathematical Introduction to Logic",
+    img:
+      "https://m.media-amazon.com/images/P/0122384520.01._SCLZZZZZZZ_SX500_.jpg",
+    url: "https://www.logicmatters.net/tyl/booknotes/enderton/",
+  },
+  {
+    author: "Chet Haase",
+    title: "Androids: The Team That Built the Android Operating System",
+    img:
+      "https://static.wixstatic.com/media/0b8e78_63b5f87eb9a74676ae418a4a6ebf7d2e~mv2.jpeg/v1/fill/w_192,h_280,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/androids_cover_front.jpeg",
+    url: "https://www.chethaase.com/androids",
+  },
+]
+
+const links = [
+  {
+    title: "Ireizō (慰霊像)",
+    subtitle: "Web Monument for the WWII Japanese American Incarceration",
+    url: "https://ireizo.com/",
+    img:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAACWCAMAAAAynWeiAAAARVBMVEULHkP///9mcooeHj+kHiKkqrlIVnIxHjqRHiYpOlqFjqHg4+gaLE/Cx9Dw8fOUnK12gJU5SGZXZH55HiuzucXR1dwVHkEwbcSxAAAEAElEQVR4nO2d25qbIBRGE1ttEc9N+v6P2sAkRtgbzaTxcLHW1QwRhZ/Nz0bmm5xOAAAAAAAAAAAAAACf42fMn71bdBB+CPZuERwbETB/927RQcBjAD4CHpMAjwH4CL9iyHy/+B2DxwC8Ax6TAI8BAAAAAAAAgONjRqq9m3IozHmk3rsthwJhElTFSL93WwBeocpGJvY/PEuzoVCq9ZkguKxQi5VaccVnu/KrtbZuh0/08h3Kh8mVU2HseUKTm7iWuZxjApM0jxtcp90uRSVHJhtVlc3c07fB1L5bocdVvg9tUQyd/7gU1TLX9frhkLVYPTrXtSas524aBIu7dS6b5Oo2Ze88OL9dYRXpNsF1URTm41gOroutuGCYduoWIfGymkk9y6jECWVlPLji9hG/5qo+fRMWhDkVbmCFExTBaPfNS8LY6a9Gn0htVDHXw2oDloQ51dqghcKcspeECcLDqrFQinq1Opc3YFGYTEtAI2FOcSKmCSMnktgJuTCyYVHVaBG7AYvCFK8IE6MIE6jgJ6g0mKtSWu60M1gUpr/9fIkveEOYKZVVP1fHYK+QWRRm0EzyP4Vp5ZRxXJJ+LEZmfRaFyTUziIQRwzwvTGIiVa5YvoFxVzfJe63GkjBGHcVQmEzcYVYYnxl3stzd9CqLvV7bb7MXhHGdUHoYCHO7Jv58Vpg8YadlYs5YfeuwMklh6tzRnK1mfD687Z1G3mFOmExPedPJ3D6pTFKYO1f1tet/CGOSAZAS4GDCdMbo2wFHOJWa7wiTTvLVHPt0OGHcoLap5Co03+4bwiQn0vxUOpDHuKZUifUjXq5Fd5LC+ImUeP+UGoZ9Mrz5Vcl7ieIybyd4+cx7hExPWPw+fOZZK7GwXNe6Au8Kk6l7xzuVbmnZITNfo8fxm8L4iZR+Wam7rL5RWJ2lzLdTtzVvCnOZ33SrE1d5FbEJL72oEn0UwkQOrQujiFwGsaA9K98nYF57H9PE4R8LU0ariSqMn5bhnUzYZ3dF9KxhITZXY1EYv4rGe7tIGBMvs6owtVz78ygYRJbjXCnp1quyLEylvJ6NhBHHBJowyqu4TMyS6OygsMl0cGV6Gd43KcLk3O8M5CFRPv0t6rGSxBqZ8rpwiO3DHfc19/O/yqd8e8SLf7ITIWjw8HUS+DzqKiNlen8OZ+sHcSgUX0eRNshwg/PNJ8JXjRO1uZRl6+7baHn36lRjY6dD+dxaj87iTx7H9WRQ+jcVphtLJ2JqlVRhnDSPdtXd4f+kqi/6Lad67/6yoDi8KgAAAAAAAAAAAAAAAAAAO8E/U0/Al8LA9+ALGxLgMQAfAY9JgMcAfAS+sCEBX9gA8BHwmAR4DAAAAAAAAAAAAACsyj+jKCRhEqf1VgAAAABJRU5ErkJggg==",
+    height: 50,
+  },
+  {
+    title: "Beej's guides",
+    subtitle: "I probably learned more from this than most of my courses",
+    url: "https://beej.us/guide/",
+    img: "https://beej.us/guide/bg.gif",
+    height: 20,
+  },
+]
+
+function Reading() {
+  return (
+    <section
+      className="page readings-page"
+      style={{
+        margin: "0 auto",
+        maxWidth: "700px",
+        marginTop: "90px",
+        display: "table",
+        padding: "20px",
+      }}
+    >
+      <Layout>
+        Some readings and links I like.
+        <section className="readings">
+          <h1>Readings</h1>
+          {readings.map(reading => (
+            <section className="reading-paper">
+              <section className="reading-title-author">
+                <em>{reading.title}</em>
+                <div>{reading.author}</div>
+              </section>
+              <section className="reading-img">
+                <a href={reading.url} target="_blank">
+                  <img src={reading.img} height={80} />
+                </a>
+              </section>
+            </section>
+          ))}
+        </section>
+        <section className="readings">
+          <h1>Links</h1>
+          {links.map(link => (
+            <section className="reading-paper">
+              <section className="reading-title-author">
+                <em>{link.title}</em>
+                <div>{link.subtitle}</div>
+              </section>
+              <section className="reading-img">
+                <a href={link.url} target="_blank">
+                  <img src={link.img} height={link.height} />
+                </a>
+              </section>
+            </section>
+          ))}
+        </section>
+      </Layout>
+    </section>
+  )
+}
+export default Reading

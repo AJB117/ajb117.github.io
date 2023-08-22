@@ -25,11 +25,7 @@ const TopBar = ({ inBlogPost }) => {
         <Toolbar variant="dense">
           <div className="text">
             <Link to="/">Home</Link>
-            {/* <h2>
-              <Link to="/blog">
-                Posts
-              </Link>
-            </h2> */}
+            <Link to="/reading">Personal</Link>
           </div>
         </Toolbar>
       </AppBar>
