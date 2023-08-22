@@ -10,7 +10,7 @@ const educations = [
     height: 80,
     date: "8.2023 - present",
     credentialOrPlacement: "Ph.D. in Computer Science",
-    note: "Focusing on ML on graphs",
+    note: "Working on ML on graphs",
     link: "https://www.virginia.edu/",
   },
   {
@@ -43,7 +43,7 @@ const experiences = [
     height: 80,
     date: "6.2021 - 3.2022",
     credentialOrPlacement: "Contracted Software Engineer",
-    note: "Dashboards and deep vision models",
+    note: "Dashboards, deep vision models, and data pipelines",
     link: "https://flovisionsolutions.com/",
   },
   {
@@ -63,7 +63,7 @@ const experiences = [
     height: 80,
     date: "12.2020 - 2.2021",
     credentialOrPlacement: "Software Development Intern",
-    note: "Mockup data generation and dashboards",
+    note: "Mock data generation and dashboards",
     link: "https://www.rjreliance.com/",
   },
 ]

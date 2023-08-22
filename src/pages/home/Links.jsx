@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 import "../../styles/home.css"
 import "../../styles/global.css"
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons"
 
 const Links = () => (
   <>
