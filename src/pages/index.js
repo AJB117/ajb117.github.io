@@ -20,7 +20,7 @@ export default function HomeIndex() {
       <footer>
         This site was built using{" "}
         <Href href="https://www.gatsbyjs.com/">Gatsby.</Href>
-        <a
+        {/* <a
           href="https://clustrmaps.com/site/1bu47"
           title="Visit tracker"
           style={{ display: "none" }}
@@ -29,7 +29,7 @@ export default function HomeIndex() {
             style={{ display: "none" }}
             src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=yRhSh5ifVGfOg83kWjRtv4tKucQeFHFiWGuehYwaLeI"
           />
-        </a>
+        </a> */}
       </footer>
     </>
   )

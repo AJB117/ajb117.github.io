@@ -11,6 +11,7 @@ const educations = [
     date: "8.2023 - present",
     credentialOrPlacement: "Ph.D. in Computer Science",
     note: "Focusing on ML on graphs",
+    link: "https://www.virginia.edu/",
   },
   {
     name: "University of Notre Dame",
@@ -20,6 +21,7 @@ const educations = [
     date: "8.2018 - 12.2022",
     credentialOrPlacement: "B.S. in Computer Science, B.A. in Philosophy",
     note: "Cum Laude, Phi Beta Kappa",
+    link: "https://www.nd.edu/",
   },
 ]
 
@@ -32,6 +34,7 @@ const experiences = [
     date: "6.2021 - 5.2022",
     credentialOrPlacement: "Software Developer",
     note: "Web and mobile development",
+    link: "https://lucyinstitute.nd.edu/about-the-lucy-institute/",
   },
   {
     name: "FloVision Solutions",
@@ -41,6 +44,7 @@ const experiences = [
     date: "6.2021 - 3.2022",
     credentialOrPlacement: "Contracted Software Engineer",
     note: "Dashboards and deep vision models",
+    link: "https://flovisionsolutions.com/",
   },
   {
     name: "Million Marker",
@@ -50,6 +54,7 @@ const experiences = [
     date: "2.2021 - 5.2021",
     credentialOrPlacement: "Software Engineering Intern",
     note: "OCR for labels",
+    link: "https://www.millionmarker.com/",
   },
   {
     name: "RJ Reliance",
@@ -59,13 +64,24 @@ const experiences = [
     date: "12.2020 - 2.2021",
     credentialOrPlacement: "Software Development Intern",
     note: "Mockup data generation and dashboards",
+    link: "https://www.rjreliance.com/",
   },
 ]
 
-const ExpOrEd = ({ name, img, height, date, credentialOrPlacement, note }) => {
+const ExpOrEd = ({
+  name,
+  img,
+  height,
+  date,
+  credentialOrPlacement,
+  note,
+  link,
+}) => {
   return (
     <li>
-      <img src={img} height={height} />
+      <a href={link} target={"_blank"}>
+        <img src={img} height={height} />
+      </a>
       <div style={{ flexGrow: 1 }}>
         <div className="exp-and-ed-name-date">
           <h3 style={{ margin: "0 0 5px" }}>{name}</h3>
@@ -74,7 +90,7 @@ const ExpOrEd = ({ name, img, height, date, credentialOrPlacement, note }) => {
         <div>
           {credentialOrPlacement}
           <br />
-          {note}
+          <em>{note}</em>
         </div>
       </div>
     </li>

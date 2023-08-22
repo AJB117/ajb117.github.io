@@ -18,7 +18,7 @@ const formatAuthors = authors => {
 const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
   return (
     <section className="paper">
-      <em>{title}</em>
+      {title}
       <section>{authors}</section>
       <section>
         {booktitle} {year}

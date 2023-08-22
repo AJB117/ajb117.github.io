@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
 import "../../styles/home.css"
 import "../../styles/global.css"
-// import ExpAndEd from "./ExpAndEd"
+import ExpAndEd from "./ExpAndEd"
 
 const Home = () => (
   <>
@@ -30,7 +30,7 @@ const Home = () => (
         <Links />
         <Interests />
         <Papers />
-        {/* <ExpAndEd /> */}
+        <ExpAndEd />
       </div>
     </div>
   </>
