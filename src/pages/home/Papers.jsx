@@ -27,7 +27,7 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
           arXiv
         </Href>
         <Href className="paperLink" href={codeUrl}>
-          Code
+          code
         </Href>
       </section>
     </section>
