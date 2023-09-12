@@ -21,7 +21,7 @@ const Links = () => (
         }}
       >
         <li>
-          <a href="mailto:psoga343@gmail.com" className="normalLink">
+          <a href="mailto:zqe3cg@virginia.edu" className="normalLink">
             <FontAwesomeIcon icon={faEnvelope} /> zqe3cg@virginia.edu
           </a>
         </li>
