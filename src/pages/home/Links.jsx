@@ -3,7 +3,11 @@ import Href from "../../components/Href"
 import { Helmet } from "react-helmet"
 import { faFilePdf, faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import {
+  faLinkedin,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
 import "../../styles/home.css"
 import "../../styles/global.css"
 
@@ -32,6 +36,11 @@ const Links = () => (
         <li>
           <Href href="https://github.com/AJB117">
             <FontAwesomeIcon icon={faGithub} /> github
+          </Href>
+        </li>
+        <li>
+          <Href href="https://twitter.com/PatrickSoga">
+            <FontAwesomeIcon icon={faTwitter} /> twitter
           </Href>
         </li>
       </ul>
