@@ -13,13 +13,7 @@ const Links = () => (
       <meta name="author" content="Patrick Soga, AJB117" />
     </Helmet>
     <section className="links">
-      <ul
-        style={{
-          listStyle: "none",
-          padding: 0,
-          margin: 0,
-        }}
-      >
+      <ul>
         <li>
           <a href="mailto:psoga343@gmail.com" className="normalLink">
             <FontAwesomeIcon icon={faEnvelope} /> zqe3cg@virginia.edu

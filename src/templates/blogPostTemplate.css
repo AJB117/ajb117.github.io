@@ -1,24 +1,29 @@
 .blog-post-header {
   margin: 0 auto;
-  font-size: 22px;
-  max-width: 800px;
+  /* font-size: 22px; */
+  /* font-size: rem; */
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin-top: 80px;
 }
 
 .blog-post-content {
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
-  font-size: 17px;
-  line-height: 1.4;
+  /* font-size: 14px; */
+  /* font-size: 0.9rem; */
+  line-height: 1.3;
 }
 
 @media (pointer: none), (pointer: coarse) {
   .blog-post-header {
-    font-size: 14px;
+    font-size: 0.9rem;
     margin: 0 auto;
+    margin-top: 80px;
     max-width: 95%;
   }
   .blog-post-content {
-    font-size: 14px;
+    font-size: 0.9rem;
     max-width: 95%;
     margin: 0 auto;
     /* line-height: 1.6; */

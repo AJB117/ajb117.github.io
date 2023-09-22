@@ -10,7 +10,7 @@ const educations = [
     height: 80,
     date: "8.2023 - present",
     credentialOrPlacement: "Ph.D. in Computer Science",
-    note: "Working on ML on graphs",
+    note: "Working on AI/ML for graph-structured data",
     link: "https://www.virginia.edu/",
   },
   {
@@ -33,7 +33,7 @@ const experiences = [
     height: 80,
     date: "6.2021 - 5.2022",
     credentialOrPlacement: "Software Developer",
-    note: "Web and mobile development",
+    note: "Web + mobile apps for health data management",
     link: "https://lucyinstitute.nd.edu/about-the-lucy-institute/",
   },
   {
@@ -100,7 +100,7 @@ const ExpOrEd = ({
 const ExpAndEd = () => (
   <>
     <div className="exp-and-ed">
-      <h2>Experience</h2>
+      <h2>Work Experience</h2>
       <ul>
         {experiences.map(experience => (
           <ExpOrEd {...experience} />

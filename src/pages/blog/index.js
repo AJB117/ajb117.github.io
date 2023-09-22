@@ -21,7 +21,7 @@ const Blog = ({
         <meta name="author" content="Patrick Soga, AJB117" />
       </Helmet>
       <Layout>
-        <section className="blog-front page">
+        <div className="blog-front page">
           {edges.map((edge, idx) => (
             <Card key={idx} className="blog-card" elevation={isMobile ? 4 : 0}>
               <CardActionArea
@@ -43,7 +43,7 @@ const Blog = ({
               </CardActionArea>
             </Card>
           ))}
-        </section>
+        </div>
       </Layout>
     </>
   )

@@ -26,13 +26,6 @@ const readings = [
     url: "https://en.wikipedia.org/wiki/The_Culture_of_Narcissism",
   },
   {
-    author: "Voltaire",
-    title: "Candide",
-    img:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Candide1759.jpg/800px-Candide1759.jpg",
-    url: "https://en.wikipedia.org/wiki/Candide",
-  },
-  {
     author: "Eric Steinhart",
     title: "More Precisely: The Math You Need to Do Philosophy",
     img: "https://ericsteinhart.com/images/moreprecisely2.jpg",
@@ -81,62 +74,68 @@ const links = [
     height: 50,
   },
   {
-    title: "Beej's guides",
-    subtitle: "I probably learned more from this than most of my courses.",
+    title: "Beej's Guides",
+    subtitle: "I probably learned more from this than most of my coursework.",
     url: "https://beej.us/guide/",
     img: "https://beej.us/guide/bg.gif",
     height: 20,
+  },
+  {
+    title: "Build Your Own X",
+    subtitle: "Enlightening resource on topics not commonly taught.",
+    url: "https://build-your-own.org/",
+    img: "https://build-your-own.org/favicon.ico",
+    height: 50,
   },
 ]
 
 function Reading() {
   return (
-    <section
-      className="page readings-page"
-      style={{
-        margin: "0 auto",
-        maxWidth: "700px",
-        marginTop: "90px",
-        display: "table",
-        padding: "20px",
-      }}
-    >
+    <div className="readings-page">
       <Layout inBlogPost={true}>
-        Some readings and links that I like.
-        <section className="readings">
-          <h1>Readings</h1>
+        {/* Some readings and links that I like. */}
+        <div className="readings">
+          <h1>Cool Readings</h1>
           {readings.map(reading => (
-            <section className="reading-paper">
-              <section className="reading-title-author">
+            <div className="reading-paper">
+              <div className="reading-title-author">
                 <em>{reading.title}</em>
                 <div>{reading.author}</div>
-              </section>
-              <section className="reading-img">
+              </div>
+              <div className="reading-img">
                 <a href={reading.url} target="_blank">
-                  <img src={reading.img} height={90} />
+                  <img
+                    src={reading.img}
+                    height={90}
+                    style={{ verticalAlign: "middle" }}
+                  />
                 </a>
-              </section>
-            </section>
+              </div>
+            </div>
           ))}
-        </section>
-        <section className="readings">
-          <h1>Links</h1>
+        </div>
+        <div className="readings">
+          <h1>Cool Links</h1>
           {links.map(link => (
-            <section className="reading-paper">
-              <section className="reading-title-author">
+            <div className="reading-paper">
+              <div className="reading-title-author">
                 <em>{link.title}</em>
                 <div>{link.subtitle}</div>
-              </section>
-              <section className="reading-img">
+              </div>
+              <div className="reading-img">
                 <a href={link.url} target="_blank">
-                  <img src={link.img} height={link.height} />
+                  <img
+                    src={link.img}
+                    height={link.height}
+                    style={{ verticalAlign: "middle" }}
+                  />
                 </a>
-              </section>
-            </section>
+              </div>
+            </div>
           ))}
-        </section>
+        </div>
       </Layout>
-    </section>
+    </div>
   )
 }
 export default Reading
