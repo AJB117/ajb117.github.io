@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[942],{8153:function(e,t,a){a.r(t);var r=a(7294);t.default=function(){return r.createElement("a",{href:"mailto:psoga@nd.edu"},"psoga@nd.edu")}}}]);
-//# sourceMappingURL=component---src-pages-home-email-jsx-56330ca54a4771cdcb34.js.map
