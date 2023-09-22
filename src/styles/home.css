@@ -109,6 +109,7 @@
   }
   .exp-and-ed-name-date {
     display: block;
+    margin-top: -4px;
     width: 100%;
   }
 }
