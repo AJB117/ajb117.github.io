@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
+import Href from "../../components/Href"
 import "../../styles/home.css"
 import "../../styles/global.css"
 
@@ -133,6 +134,11 @@ function Reading() {
               </div>
             </div>
           ))}
+          <div style={{ marginTop: "70px" }}>
+            I'm originally from Southern California. Besides research and
+            reading, I enjoy calisthenics and StarCraft II. One day, I'll find
+            the time to study for my ham radio Technician's License.
+          </div>
         </div>
       </Layout>
     </div>
