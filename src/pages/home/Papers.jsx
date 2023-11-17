@@ -2,6 +2,8 @@ import React from "react"
 import YAMLData from "../../../content/content.yml"
 import Href from "../../components/Href"
 import { Venues, parseBibTeX, preprocessPapers } from "../../util/PapersUtil"
+import { faCopy } from "@fortawesome/free-regular-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const formatAuthors = authors => {
   const needsOxfordComma = authors.length > 2
@@ -15,7 +17,8 @@ const formatAuthors = authors => {
   ))
 }
 
-const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
+const Paper = ({ authors, booktitle, title, year, url, codeUrl, bibtex }) => {
+  const [showBibtex, setShowBibtex] = React.useState(false)
   return (
     <section className="paper">
       {title}
@@ -29,7 +32,21 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
         <Href className="paperLink" href={codeUrl}>
           code
         </Href>
+        <button className="paperLink" style={{backgroundColor: "white", cursor: "pointer"}} onClick={() => setShowBibtex(prev => !prev)}>
+          BibTeX
+        </button>
       </section>
+      {
+        showBibtex && <>
+        <pre style={{overflowX: "scroll", backgroundColor: "#D0D0D0", padding: "4px"}}>{bibtex}
+          <button className="paperLink" style={{backgroundColor: "white", cursor: "pointer", float: "right", marginBottom: "0px"}}>
+            <FontAwesomeIcon icon={faCopy} onClick={() => {
+              navigator.clipboard.writeText(bibtex)
+            }}/>
+            </button>
+          </pre>
+        </>
+      }
     </section>
   )
 }
@@ -37,11 +54,12 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl }) => {
 const Papers = () => {
   let papers = parseBibTeX(YAMLData.papers)
     .map(preprocessPapers)
-    .map(paper => ({
+    .map((paper, idx) => ({
       ...paper,
       authors: formatAuthors(paper.authors),
       booktitle:
         Venues.find(venue => venue.name === paper.booktitle).abbrev + ", ",
+      bibtex: YAMLData.papers.split("\n\n")[idx]
     }))
 
   return (

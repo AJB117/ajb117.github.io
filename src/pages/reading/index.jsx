@@ -134,7 +134,7 @@ function Reading() {
               </div>
             </div>
           ))}
-          <div style={{ marginTop: "70px" }}>
+          <div style={{ marginTop: "50px" }}>
             I'm originally from Southern California. Besides research and
             reading, I enjoy calisthenics and StarCraft II. One day, I'll find
             the time to study for my ham radio Technician's License.
