@@ -59,7 +59,7 @@ const Papers = () => {
       authors: formatAuthors(paper.authors),
       booktitle:
         Venues.find(venue => venue.name === paper.booktitle).abbrev + ", ",
-      bibtex: YAMLData.papers.split("\n\n")[idx]
+      bibtex: YAMLData.papers.split("\n\n")[idx].trim()
     }))
 
   return (
