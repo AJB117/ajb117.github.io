@@ -1,5 +1,5 @@
-papers: >
-  @article{gape,
+papers: |
+  @article{soga-chiang-2023-gape,
     doi = {10.48550/ARXIV.2212.06898},
     url = {https://arxiv.org/abs/2212.06898},
     author = {Soga, Patrick and Chiang, David},
@@ -10,7 +10,7 @@ papers: >
     codeUrl = {https://github.com/AJB117/gape}
   }
 
-  @inproceedings{dge,
+  @inproceedings{krieg-etal-2023-dge,
     title = {Deep Ensembles for Graphs with Higher-Order Dependencies},
     author = {Steven Krieg and William Burgis and Patrick Soga and Nitesh Chawla},
     booktitle = {International Conference on Learning Representations},
