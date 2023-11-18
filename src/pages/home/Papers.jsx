@@ -52,6 +52,7 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl, bibtex }) => {
 }
 
 const Papers = () => {
+  const paperStrings = YAMLData.papers.split("\n\n").map(paper => paper.trim())
   let papers = parseBibTeX(YAMLData.papers)
     .map(preprocessPapers)
     .map((paper, idx) => ({
@@ -59,7 +60,7 @@ const Papers = () => {
       authors: formatAuthors(paper.authors),
       booktitle:
         Venues.find(venue => venue.name === paper.booktitle).abbrev + ", ",
-      bibtex: YAMLData.papers.split("\n\n")[idx].trim()
+      bibtex: paperStrings[idx]
     }))
 
   return (
