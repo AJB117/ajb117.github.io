@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../../components/Layout"
-import Href from "../../components/Href"
 import "../../styles/home.css"
 import "../../styles/global.css"
 
@@ -68,7 +67,7 @@ const links = [
   {
     title: "Ireizō (慰霊像)",
     subtitle:
-      "Web Monument for the Japanese-American incarceration during WWII.",
+      "Web monument for the Japanese-American incarceration during WWII.",
     url: "https://ireizo.com/",
     img:
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAACWCAMAAAAynWeiAAAARVBMVEULHkP///9mcooeHj+kHiKkqrlIVnIxHjqRHiYpOlqFjqHg4+gaLE/Cx9Dw8fOUnK12gJU5SGZXZH55HiuzucXR1dwVHkEwbcSxAAAEAElEQVR4nO2d25qbIBRGE1ttEc9N+v6P2sAkRtgbzaTxcLHW1QwRhZ/Nz0bmm5xOAAAAAAAAAAAAAACf42fMn71bdBB+CPZuERwbETB/927RQcBjAD4CHpMAjwH4CL9iyHy/+B2DxwC8Ax6TAI8BAAAAAAAAgONjRqq9m3IozHmk3rsthwJhElTFSL93WwBeocpGJvY/PEuzoVCq9ZkguKxQi5VaccVnu/KrtbZuh0/08h3Kh8mVU2HseUKTm7iWuZxjApM0jxtcp90uRSVHJhtVlc3c07fB1L5bocdVvg9tUQyd/7gU1TLX9frhkLVYPTrXtSas524aBIu7dS6b5Oo2Ze88OL9dYRXpNsF1URTm41gOroutuGCYduoWIfGymkk9y6jECWVlPLji9hG/5qo+fRMWhDkVbmCFExTBaPfNS8LY6a9Gn0htVDHXw2oDloQ51dqghcKcspeECcLDqrFQinq1Opc3YFGYTEtAI2FOcSKmCSMnktgJuTCyYVHVaBG7AYvCFK8IE6MIE6jgJ6g0mKtSWu60M1gUpr/9fIkveEOYKZVVP1fHYK+QWRRm0EzyP4Vp5ZRxXJJ+LEZmfRaFyTUziIQRwzwvTGIiVa5YvoFxVzfJe63GkjBGHcVQmEzcYVYYnxl3stzd9CqLvV7bb7MXhHGdUHoYCHO7Jv58Vpg8YadlYs5YfeuwMklh6tzRnK1mfD687Z1G3mFOmExPedPJ3D6pTFKYO1f1tet/CGOSAZAS4GDCdMbo2wFHOJWa7wiTTvLVHPt0OGHcoLap5Co03+4bwiQn0vxUOpDHuKZUifUjXq5Fd5LC+ImUeP+UGoZ9Mrz5Vcl7ieIybyd4+cx7hExPWPw+fOZZK7GwXNe6Au8Kk6l7xzuVbmnZITNfo8fxm8L4iZR+Wam7rL5RWJ2lzLdTtzVvCnOZ33SrE1d5FbEJL72oEn0UwkQOrQujiFwGsaA9K98nYF57H9PE4R8LU0ariSqMn5bhnUzYZ3dF9KxhITZXY1EYv4rGe7tIGBMvs6owtVz78ygYRJbjXCnp1quyLEylvJ6NhBHHBJowyqu4TMyS6OygsMl0cGV6Gd43KcLk3O8M5CFRPv0t6rGSxBqZ8rpwiO3DHfc19/O/yqd8e8SLf7ITIWjw8HUS+DzqKiNlen8OZ+sHcSgUX0eRNshwg/PNJ8JXjRO1uZRl6+7baHn36lRjY6dD+dxaj87iTx7H9WRQ+jcVphtLJ2JqlVRhnDSPdtXd4f+kqi/6Lad67/6yoDi8KgAAAAAAAAAAAAAAAAAAO8E/U0/Al8LA9+ALGxLgMQAfAY9JgMcAfAS+sCEBX9gA8BHwmAR4DAAAAAAAAAAAAACsyj+jKCRhEqf1VgAAAABJRU5ErkJggg==",
@@ -83,7 +82,7 @@ const links = [
   },
   {
     title: "Build Your Own X",
-    subtitle: "Enlightening resource on topics not commonly taught.",
+    subtitle: "Enlightening resource on topics not often taught.",
     url: "https://build-your-own.org/",
     img: "https://build-your-own.org/favicon.ico",
     height: 50,
