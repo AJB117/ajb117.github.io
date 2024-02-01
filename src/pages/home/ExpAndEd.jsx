@@ -10,7 +10,7 @@ const educations = [
     height: 80,
     date: "8.2023 - present",
     credentialOrPlacement: "Ph.D. in Computer Science",
-    note: "Working on AI/ML for graph-structured data",
+    note: "AI/ML for graphs, geometry, and scientific applications",
     link: "https://www.virginia.edu/",
   },
   {
@@ -33,7 +33,7 @@ const experiences = [
     height: 80,
     date: "6.2021 - 5.2022",
     credentialOrPlacement: "Software Developer",
-    note: "Web + mobile apps for health data management",
+    note: "Web and mobile apps for health data management",
     link: "https://lucyinstitute.nd.edu/about-the-lucy-institute/",
   },
   {

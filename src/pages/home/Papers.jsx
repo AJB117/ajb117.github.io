@@ -32,21 +32,43 @@ const Paper = ({ authors, booktitle, title, year, url, codeUrl, bibtex }) => {
         <Href className="paperLink" href={codeUrl}>
           code
         </Href>
-        <button className="paperLink" style={{backgroundColor: "white", cursor: "pointer"}} onClick={() => setShowBibtex(prev => !prev)}>
+        <button
+          className="paperLink"
+          style={{ backgroundColor: "white", cursor: "pointer" }}
+          onClick={() => setShowBibtex(prev => !prev)}
+        >
           BibTeX
         </button>
       </section>
-      {
-        showBibtex && <>
-        <pre style={{overflowX: "scroll", backgroundColor: "#D0D0D0", padding: "4px"}}>{bibtex}
-          <button className="paperLink" style={{backgroundColor: "white", cursor: "pointer", float: "right", marginBottom: "0px"}}>
-            <FontAwesomeIcon icon={faCopy} onClick={() => {
-              navigator.clipboard.writeText(bibtex)
-            }}/>
+      {showBibtex && (
+        <>
+          <pre
+            style={{
+              overflowX: "scroll",
+              backgroundColor: "#D0D0D0",
+              padding: "4px",
+            }}
+          >
+            {bibtex}
+            <button
+              className="paperLink"
+              style={{
+                backgroundColor: "white",
+                cursor: "pointer",
+                float: "right",
+                marginBottom: "0px",
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faCopy}
+                onClick={() => {
+                  navigator.clipboard.writeText(bibtex)
+                }}
+              />
             </button>
           </pre>
         </>
-      }
+      )}
     </section>
   )
 }
@@ -60,7 +82,7 @@ const Papers = () => {
       authors: formatAuthors(paper.authors),
       booktitle:
         Venues.find(venue => venue.name === paper.booktitle).abbrev + ", ",
-      bibtex: paperStrings[idx]
+      bibtex: paperStrings[idx],
     }))
 
   return (

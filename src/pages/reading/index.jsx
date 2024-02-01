@@ -18,13 +18,13 @@ const readings = [
       "https://www.harukimurakami.com/wp-content/uploads/2015/07/NorwegianWood_r1_GB-682x1024.jpg",
     url: "https://en.wikipedia.org/wiki/Norwegian_Wood_(novel)",
   },
-  {
-    author: "Christopher Lasch",
-    title: "The Culture of Narcissism",
-    img:
-      "https://m.media-amazon.com/images/I/51cwvqnAPYL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-    url: "https://en.wikipedia.org/wiki/The_Culture_of_Narcissism",
-  },
+  // {
+  //   author: "Christopher Lasch",
+  //   title: "The Culture of Narcissism",
+  //   img:
+  //     "https://m.media-amazon.com/images/I/51cwvqnAPYL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+  //   url: "https://en.wikipedia.org/wiki/The_Culture_of_Narcissism",
+  // },
   {
     author: "Eric Steinhart",
     title: "More Precisely: The Math You Need to Do Philosophy",
@@ -82,7 +82,7 @@ const links = [
   },
   {
     title: "Build Your Own X",
-    subtitle: "Enlightening resource on topics not often taught.",
+    subtitle: "Digestible hands-on resource.",
     url: "https://build-your-own.org/",
     img: "https://build-your-own.org/favicon.ico",
     height: 50,
@@ -93,9 +93,8 @@ function Reading() {
   return (
     <div className="readings-page">
       <Layout inBlogPost={true}>
-        {/* Some readings and links that I like. */}
         <div className="readings">
-          <h1>Cool Readings</h1>
+          <h1>Books I like</h1>
           {readings.map(reading => (
             <div className="reading-paper">
               <div className="reading-title-author">
@@ -115,7 +114,7 @@ function Reading() {
           ))}
         </div>
         <div className="readings">
-          <h1>Cool Links</h1>
+          <h1>Links I like</h1>
           {links.map(link => (
             <div className="reading-paper">
               <div className="reading-title-author">
@@ -133,11 +132,11 @@ function Reading() {
               </div>
             </div>
           ))}
-          <div style={{ marginTop: "50px" }}>
-            I'm originally from Southern California. Besides research and
-            reading, I enjoy calisthenics and StarCraft II. One day, I'll find
-            the time to study for my ham radio Technician's License.
-          </div>
+        </div>
+        <div className="readings" style={{ marginTop: "50px" }}>
+          I'm originally from Southern California. Besides research and reading,
+          I enjoy calisthenics and StarCraft II. One day, I'll find the time to
+          study for my ham radio Technician license.
         </div>
       </Layout>
     </div>
