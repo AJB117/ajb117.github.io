@@ -29,7 +29,7 @@ const experiences = [
   {
     name: "Lucy Family Institute for Data and Society",
     img:
-      "https://pbs.twimg.com/profile_images/1466411951806992384/n2auJEVP_400x400.jpg",
+      "https://media.licdn.com/dms/image/C560BAQEUrZ90zcCHLQ/company-logo_200_200/0/1651250071541?e=2147483647&v=beta&t=H7hN7IkmMUPluM3GF2JC8EaaICsPsgO2MUUJ9ntm5uQ",
     height: 80,
     date: "6.2021 - 5.2022",
     credentialOrPlacement: "Software Developer",
