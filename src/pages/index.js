@@ -18,8 +18,11 @@ export default function HomeIndex() {
         <Home />
       </Layout>
       <footer>
-        This site was built with{" "}
-        <Href href="https://www.gatsbyjs.com/">Gatsby.</Href>
+        This{" "}
+        <Href href="https://github.com/AJB117/ajb117.github.io/tree/revision">
+          site
+        </Href>{" "}
+        was built with <Href href="https://www.gatsbyjs.com/">Gatsby.</Href>
       </footer>
     </>
   )
