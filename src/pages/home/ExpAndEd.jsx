@@ -1,6 +1,7 @@
 import React from "react"
 import "../../styles/home.css"
 import "../../styles/global.css"
+import Href from "../../components/Href"
 
 const educations = [
   {
@@ -10,7 +11,7 @@ const educations = [
     height: 80,
     date: "8.2023 - present",
     credentialOrPlacement: "Ph.D. in Computer Science",
-    note: "AI/ML for graphs, geometry, and scientific applications",
+    note: "ML for graphs, geometry, and life/physical sciences.",
     link: "https://www.virginia.edu/",
   },
   {
@@ -20,7 +21,7 @@ const educations = [
     height: 70,
     date: "8.2018 - 12.2022",
     credentialOrPlacement: "B.S. in Computer Science, B.A. in Philosophy",
-    note: "Cum Laude, Phi Beta Kappa",
+    note: "Cum Laude, Phi Beta Kappa.",
     link: "https://www.nd.edu/",
   },
 ]
@@ -33,7 +34,7 @@ const experiences = [
     height: 80,
     date: "6.2021 - 5.2022",
     credentialOrPlacement: "Software Developer",
-    note: "Web and mobile apps for health data management",
+    note: "Web and mobile apps for health data management.",
     link: "https://lucyinstitute.nd.edu/about-the-lucy-institute/",
   },
   {
@@ -43,7 +44,7 @@ const experiences = [
     height: 80,
     date: "6.2021 - 3.2022",
     credentialOrPlacement: "Contracted Software Engineer",
-    note: "Dashboards, deep vision models, and data pipelines",
+    note: "Dashboards, deep vision models, and data pipelines.",
     link: "https://flovisionsolutions.com/",
   },
   {
@@ -53,7 +54,7 @@ const experiences = [
     height: 80,
     date: "2.2021 - 5.2021",
     credentialOrPlacement: "Software Engineering Intern",
-    note: "OCR for labels",
+    note: "OCR for product labels.",
     link: "https://www.millionmarker.com/",
   },
   {
@@ -63,7 +64,7 @@ const experiences = [
     height: 80,
     date: "12.2020 - 2.2021",
     credentialOrPlacement: "Software Development Intern",
-    note: "Mock data generation and dashboards",
+    note: "Mock data generation and dashboards.",
     link: "https://www.rjreliance.com/",
   },
 ]
@@ -100,18 +101,18 @@ const ExpOrEd = ({
 const ExpAndEd = () => (
   <>
     <div className="exp-and-ed">
-      <h2>Work Experience</h2>
-      <ul>
-        {experiences.map(experience => (
-          <ExpOrEd {...experience} />
-        ))}
-      </ul>
-    </div>
-    <div className="exp-and-ed">
       <h2>Education</h2>
       <ul>
         {educations.map(education => (
           <ExpOrEd {...education} />
+        ))}
+      </ul>
+    </div>
+    <div className="exp-and-ed">
+      <h2>Work Experience</h2>
+      <ul>
+        {experiences.map(experience => (
+          <ExpOrEd {...experience} />
         ))}
       </ul>
     </div>

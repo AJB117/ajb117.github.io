@@ -1,20 +1,76 @@
 papers: |
-  @article{soga-chiang-2023-gape,
-    doi = {10.48550/ARXIV.2212.06898},
-    url = {https://arxiv.org/abs/2212.06898},
-    author = {Soga, Patrick and Chiang, David},
-    keywords = {Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
-    title = {Bridging Graph Position Encodings for Transformers with Weighted Graph-Walking Automata},
-    booktitle = {Transactions on Machine Learning Research},
-    year = {2023},
-    codeUrl = {https://github.com/AJB117/gape}
+  @inproceedings{soga2025energy,
+    title={Energy-Based Models for Predicting Mutational Effects on Proteins},
+    author={Patrick Soga and Zhenyu Lei and Yinhan He and Camille Bilodeau and Jundong Li},
+    year={2025},
+    url={}
+    codeUrl={}
+    booktitle={Submitted}
+    type={submitted}
   }
 
-  @inproceedings{krieg-etal-2023-dge,
+  @inproceedings{soga2025virtual,
+    title={VirtualGCN — Enhancing Graph Collaborative Filtering with Virtual Interactions},
+    author={Patrick Soga and Yushun Dong and Yaochen Zhu and Jundong Li and Tong Zhao and Neil Shah},
+    url={},
+    year={2025},
+    booktitle={Submitted},
+    type={submitted},
+    note={Collaboration with Snap}
+  }
+
+  @inproceedings{dong2025graph,
+    title={Graph Neural Networks Are More Than Filters: Revisiting and Benchmarking from A Spectral Perspective},
+    author={Yushun Dong and Patrick Soga and Yinhan He and Song Wang and Jundong Li},
+    booktitle={International Conference on Learning Representations},
+    year={2025},
+    url={https://arxiv.org/abs/2412.07188},
+    type={poster}
+  }
+
+  @inproceedings{soga2024deep,
+    title = {Deep Interactions for Multimodal Molecular Property Prediction},
+    author = {Patrick Soga and Zhenyu Lei and Camille Bilodeau and Jundong Li},
+    booktitle={Pacific-Asia Conference on Knowledge Discovery and Data Mining}
+    year={2025}
+    workshop = {NeurIPS 2024 AIDrugX Workshop},
+    url = {https://openreview.net/forum?id=s1hOUBIJWa},
+    type = {oral}
+  }
+
+  @inproceedings{he2024explaining,
+    title = {Explaining Graph Neural Networks with Large Language Models: A Counterfactual Perspective on Molecule Graphs},
+    author = {Yinhan He and Zaiyi Zheng and Patrick Soga and Yaochen Zhu and Yushun Dong and Jundong Li},
+    booktitle = {Conference on Empirical Methods in Natural Language Processing (Findings)},
+    year = {2024},
+    url = {https://arxiv.org/abs/2410.15165},
+    type = {poster}
+  }
+
+  @article{schnur2024saludconectamxlessonslearneddeploying,
+    title = {SaludConectaMX: Lessons Learned from Deploying a Cooperative Mobile Health System for Pediatric Cancer Care in Mexico},
+    author = {Jennifer J. Schnur* and Angélica Garcia-Martínez* and Patrick Soga* and Karla Badillo-Urquiola* and others},
+    booktitle = {ACM Conference on Computer-Supported Cooperative Work and Social Computing},
+    year = {2024},
+    url = {https://arxiv.org/abs/2408.00881},
+    type = {poster}
+  }
+
+  @article{soga2023bridging,
+    title={Bridging Graph Position Encodings for Transformers with Weighted Graph-Walking Automata},
+    author={Patrick Soga and David Chiang},
+    booktitle={Transactions on Machine Learning Research},
+    year={2023},
+    url={https://arxiv.org/abs/2212.06898},
+    type={journal}
+  }
+
+  @inproceedings{krieg2023dge,
     title = {Deep Ensembles for Graphs with Higher-Order Dependencies},
     author = {Steven Krieg and William Burgis and Patrick Soga and Nitesh Chawla},
     booktitle = {International Conference on Learning Representations},
     year = {2023},
     url = {https://arxiv.org/abs/2205.13988},
-    codeUrl = {https://github.com/sjkrieg/dge}
+    codeUrl = {https://github.com/sjkrieg/dge},
+    type = {poster}
   }

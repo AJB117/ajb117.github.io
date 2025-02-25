@@ -17,10 +17,11 @@ const Home = () => (
     <div className="home">
       <StaticImage
         className="photo-side"
-        src="../../../static/IMG_5084-cropped.jpg"
+        // src="../../../PXL_20240322_220231085.jpg"
+        src="../../../static/me.jpeg"
         alt="me"
         title="me"
-        height={320}
+        height={300}
         layout="fixed"
         imgStyle={{ objectFit: "contain" }}
         placeholder="blurred"

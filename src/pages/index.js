@@ -18,7 +18,7 @@ export default function HomeIndex() {
         <Home />
       </Layout>
       <footer>
-        This site was built using{" "}
+        This site was built with{" "}
         <Href href="https://www.gatsbyjs.com/">Gatsby.</Href>
         {/* <a
           href="https://clustrmaps.com/site/1bu47"

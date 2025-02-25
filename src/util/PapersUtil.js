@@ -7,6 +7,9 @@ export const Conferences = new Set([
   "International Conference on Machine Learning",
   "International Conference on Learning Representations",
   "Conference on Neural Information Processing Systems",
+  "Neural Information Processing Systems",
+  "Neural Information Processing Systems AIDrugX Workshop",
+  "Neural Information Processing Systems DBT",
   "International Conference on Computer Vision",
   "Conference on Computer Vision and Pattern Recognition",
   "European Conference on Computer Vision",
@@ -14,6 +17,7 @@ export const Conferences = new Set([
   "International Joint Conference on Artificial Intelligence",
   "Annual Meeting of the Association for Computational Linguistics",
   "Conference on Empirical Methods in Natural Language Processing",
+  "Conference on Empirical Methods in Natural Language Processing (Findings)",
   "North American Chapter of the Association for Computational Linguistics",
   "International Conference on Acoustics, Speech, and Signal Processing",
   "International Conference on Image Processing",
@@ -21,6 +25,9 @@ export const Conferences = new Set([
   "Knowledge Discovery and Data Mining",
   "International ACM SIGIR Conference on Research and Development in Information Retrieval",
   "International World Wide Web Conference",
+  "Conference on Information and Knowledge Management",
+  "ACM Conference on Computer-Supported Cooperative Work and Social Computing",
+  "Submitted",
 ])
 
 class Venue {
@@ -44,6 +51,15 @@ export const Venues = [
   new Venue("International Conference on Machine Learning", "ICML"),
   new Venue("International Conference on Learning Representations", "ICLR"),
   new Venue("Conference on Neural Information Processing Systems", "NeurIPS"),
+  new Venue("Neural Information Processing Systems", "NeurIPS"),
+  new Venue(
+    "Neural Information Processing Systems DBT",
+    "NeurIPS Datasets & Benchmarks Track"
+  ),
+  new Venue(
+    "Neural Information Processing Systems AIDrugX Workshop",
+    "NeurIPS Workshop on AI for New Drug Modalities"
+  ),
   new Venue("International Conference on Computer Vision", "ICCV"),
   new Venue("Conference on Computer Vision and Pattern Recognition", "CVPR"),
   new Venue("European Conference on Computer Vision", "ECCV"),
@@ -62,6 +78,10 @@ export const Venues = [
   new Venue(
     "Conference on Empirical Methods in Natural Language Processing",
     "EMNLP"
+  ),
+  new Venue(
+    "Conference on Empirical Methods in Natural Language Processing (Findings)",
+    "EMNLP (Findings)"
   ),
   new Venue(
     "North American Chapter of the Association for Computational Linguistics",
@@ -85,6 +105,16 @@ export const Venues = [
     "TPAMI"
   ),
   new Venue("Transactions on Machine Learning Research", "TMLR"),
+  new Venue("Conference on Information and Knowledge Management", "CIKM"),
+  new Venue(
+    "ACM Conference on Computer-Supported Cooperative Work and Social Computing",
+    "CSCW"
+  ),
+  new Venue(
+    "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+    "PAKDD"
+  ),
+  new Venue("Submitted", "Submitted"),
 ]
 
 const convertLFToFL = name => {
@@ -126,6 +156,9 @@ export const preprocessPapers = ({
   year,
   url,
   codeUrl,
+  workshop,
+  type,
+  note,
 }) => {
   if (booktitle === undefined) {
     booktitle = "Preprint"
@@ -140,5 +173,8 @@ export const preprocessPapers = ({
     year,
     url,
     codeUrl,
+    workshop,
+    type,
+    note,
   }
 }
