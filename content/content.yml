@@ -33,7 +33,7 @@ papers: |
     author = {Patrick Soga and Zhenyu Lei and Camille Bilodeau and Jundong Li},
     booktitle={Pacific-Asia Conference on Knowledge Discovery and Data Mining}
     year={2025}
-    workshop = {NeurIPS 2024 AIDrugX Workshop},
+    workshop = {AIDrugX @ NeurIPS 2024},
     url = {https://openreview.net/forum?id=s1hOUBIJWa},
     type = {oral}
   }
