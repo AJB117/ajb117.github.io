@@ -1,5 +1,5 @@
-# Personal Blog
+# Personal site
 
 ---
 
-This is a personal blog for myself.
+My personal site.
