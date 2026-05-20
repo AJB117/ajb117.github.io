@@ -35,34 +35,46 @@ const Paper = ({
   note,
 }) => {
   const [showBibtex, setShowBibtex] = React.useState(false)
-  let venueString = `${booktitle} ${year}${type === "oral" ? " (Oral)" : ""}.`
-  if (workshop) venueString += ` Also in ${workshop}.`
-  if (note) venueString += ` ${note}.`
+  let venueString
+  if (type === "submitted") {
+    venueString = `Submitted ${year}.`
+  } else {
+    venueString = `${booktitle} ${year}${type === "oral" ? " (Oral)" : ""}.`
+  }
+
+  let addendum = ""
+  if (workshop) addendum += ` Also in ${workshop}.`
+  if (note) addendum += ` ${note}.`
 
   return (
     <section className="paper">
       {title}
       <section>{authors}</section>
       <section>
-        <em>{venueString}</em>
-        <Href className="paperLink" href={url}>
-          arXiv
-        </Href>
-        {codeUrl && (
-          <Href className="paperLink" href={codeUrl}>
-            code
-          </Href>
+        {venueString}
+        {addendum}
+        {type === "submitted" ? null : (
+          <>
+            <Href className="paperLink" href={url}>
+              arXiv
+            </Href>
+            {codeUrl && (
+              <Href className="paperLink" href={codeUrl}>
+                code
+              </Href>
+            )}
+            <button
+              className="paperLink"
+              style={{
+                backgroundColor: "white",
+                cursor: "pointer",
+              }}
+              onClick={() => setShowBibtex(prev => !prev)}
+            >
+              BibTeX
+            </button>
+          </>
         )}
-        <button
-          className="paperLink"
-          style={{
-            backgroundColor: "white",
-            cursor: "pointer",
-          }}
-          onClick={() => setShowBibtex(prev => !prev)}
-        >
-          BibTeX
-        </button>
       </section>
       {showBibtex && (
         <>
@@ -131,12 +143,14 @@ const Papers = () => {
           <Paper key={idx} {...paper} />
         ))}
       </section>
-      <section className="papers">
-        <h2>In Submission</h2>
-        {submittedPapers.map((paper, idx) => (
-          <Paper key={idx} {...paper} />
-        ))}
-      </section>
+      {submittedPapers.length !== 0 && (
+        <section className="papers">
+          <h2>In Submission</h2>
+          {submittedPapers.map((paper, idx) => (
+            <Paper key={idx} {...paper} />
+          ))}
+        </section>
+      )}
     </>
   )
 }

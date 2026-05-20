@@ -26,18 +26,14 @@ p {
   font-weight: 430;
 }
 
-.links {
-  margin-top: 20px;
+.papers,
+.news,
+.exp-and-ed {
+  margin-top: 48px;
 }
 
 .photo-side {
   margin-top: 30px;
-}
-
-.papers,
-.news,
-.exp-and-ed {
-  margin-top: 40px;
 }
 
 .news {
@@ -73,17 +69,39 @@ p {
   margin: 0;
 }
 
+.exp-and-ed > ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 .exp-and-ed li {
   list-style: none;
-  margin: 20px -40px;
-  margin-right: 10px;
-  /* margin: 20px 0; */
+  margin: 20px 0;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+}
+
+.exp-and-ed li > a {
+  flex: 0 0 80px;
+  width: 120px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.exp-and-ed li > a + div {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .exp-and-ed img {
-  margin-right: 20px;
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .exp-and-ed-name-date {
@@ -106,13 +124,15 @@ p {
     margin: auto;
     margin-bottom: 10px;
   }
-  .links {
-    margin-top: 10px;
-  }
   .exp-and-ed-name-date {
     display: block;
     margin-top: -4px;
     width: 100%;
+  }
+  .exp-and-ed li > a {
+    flex-basis: 90px;
+    width: 90px;
+    margin-right: 20px;
   }
 }
 

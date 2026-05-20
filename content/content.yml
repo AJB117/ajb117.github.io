@@ -1,21 +1,41 @@
 papers: |
-  @inproceedings{soga2025energy,
-    title={Energy-Based Models for Predicting Mutational Effects on Proteins},
-    author={Patrick Soga and Zhenyu Lei and Yinhan He and Camille Bilodeau and Jundong Li},
-    year={2025},
-    url={}
-    codeUrl={}
-    booktitle={Submitted}
-    type={submitted}
+  @inproceedings{soga2026guide,
+     title={GuideDock: Geometry-Guided Diffusion for Rigid Protein-Protein Docking},
+     author={Patrick Soga and Zhenyu Lei and Yinhan He and Camille Bilodeau and Jundong Li},
+     year={2026},
+     url={},
+     codeUrl={},
+     booktitle={Submitted},
+     type={submitted}
+  }
+
+  @inproceedings{lei2026mol,
+     title={MolEdit: Knowledge Editing for Multimodal Molecule Language Models},
+     author={Zhenyu Lei and Patrick Soga and Yaochen Zhu and Yinhan He and Yushun Dong and Jundong Li},
+     year={2026},
+     url={},
+     codeUrl={},
+     booktitle={ACM International Conference on Web Search and Data Mining},
+     type={oral}
+  }
+
+  @inproceedings{soga2025energybased,
+     title={Energy-Based Models for Predicting Mutational Effects on Proteins},
+     author={Patrick Soga and Zhenyu Lei and Yinhan He and Camille Bilodeau and Jundong Li},
+     year={2025},
+     url={https://openreview.net/forum?id=HFXjxmWpjV},
+     codeUrl={},
+     booktitle={ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+     type={poster}
   }
 
   @inproceedings{soga2025virtual,
-    title={VirtualGCN — Enhancing Graph Collaborative Filtering with Virtual Interactions},
+    title={VirtualGCN – Enhancing Graph Collaborative Filtering with Virtual Interactions},
     author={Patrick Soga and Yushun Dong and Yaochen Zhu and Jundong Li and Tong Zhao and Neil Shah},
     url={},
-    year={2025},
-    booktitle={Submitted},
-    type={submitted},
+    booktitle={IEEE International Conference on Big Data}
+    year={2025}
+    type={poster} 
     note={Collaboration with Snap}
   }
 

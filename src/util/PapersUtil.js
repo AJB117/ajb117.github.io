@@ -22,11 +22,13 @@ export const Conferences = new Set([
   "International Conference on Acoustics, Speech, and Signal Processing",
   "International Conference on Image Processing",
   "International Conference on Data Mining",
-  "Knowledge Discovery and Data Mining",
+  "ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
   "International ACM SIGIR Conference on Research and Development in Information Retrieval",
   "International World Wide Web Conference",
   "Conference on Information and Knowledge Management",
   "ACM Conference on Computer-Supported Cooperative Work and Social Computing",
+  "IEEE International Conference on Big Data",
+  "ACM International Conference on Web Search and Data Mining",
   "Submitted",
 ])
 
@@ -94,7 +96,15 @@ export const Venues = [
 
   new Venue("International Conference on Image Processing", "ICIP"),
   new Venue("International Conference on Data Mining", "ICDM"),
-  new Venue("Knowledge Discovery and Data Mining", "KDD"),
+  new Venue(
+    "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+    "KDD"
+  ),
+  new Venue("IEEE International Conference on Big Data", "IEEE Big Data"),
+  new Venue(
+    "ACM International Conference on Web Search and Data Mining",
+    "WSDM"
+  ),
   new Venue(
     "International ACM SIGIR Conference on Research and Development in Information Retrieval",
     "SIGIR"
